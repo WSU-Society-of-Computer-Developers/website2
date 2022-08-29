@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blinker:wght@300&family=Teko&display=swap');
+
+body,
+html {
+    height: 100%;
+}
+
+.bg {
+    background-image: url("/bg.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title {
+    font-family: 'Teko', sans-serif;
+}
+
+.paragraph {
+    font-family: "Blinker", sans-serif;
+}
