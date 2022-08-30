@@ -1,6 +1,8 @@
 import React from "react";
-import { Box, Text, Heading, Meter } from "grommet";
-import { StatusBadge } from "../components";
+import { Box, Text, Heading, Meter, Image, Button } from "grommet";
+import { StatusBadge, Avatar } from "../components";
+
+import { Mail } from "grommet-icons"
 
 export const UtilizationCard = ({ data, url, ...rest }) => (
   <Box
@@ -8,8 +10,10 @@ export const UtilizationCard = ({ data, url, ...rest }) => (
     justify="between"
     gap="large"
     pad="medium"
-    background="white"
-    round
+    background="black"
+    round="small"
+    className="animate__animated animate__zoomIn"
+    style={{ marginBottom: 10, }}
   >
     <Box gap="large">
       <Box gap="xsmall">
@@ -17,34 +21,21 @@ export const UtilizationCard = ({ data, url, ...rest }) => (
           {data.name}
         </Heading>
         <Text color="gray" size="small">
-          {data.value}
+          {data.title}
         </Text>
-      </Box>
-      <Box gap="medium">
-        <Box direction="row" align="center">
-          <StatusBadge
-            background={data.used ? "status-ok" : "status-unknown"}
-          />
-          <Text color="dark-1" size="small" margin={{ left: "xsmall" }}>
-            Used ({data.usedValue})
-          </Text>
-        </Box>
-        <Box direction="row" align="center">
-          <StatusBadge
-            background={data.available ? "status-ok" : "status-unknown"}
-          />
-          <Text color="dark-1" size="small" margin={{ left: "xsmall" }}>
-            Available ({data.availableValue})
-          </Text>
-        </Box>
+        <Text color="light-4" size="small">
+          {data.major}
+        </Text>
+        {data.contact && <Button secondary href={data.contact} target="_blank"><Mail/></Button>} 
       </Box>
     </Box>
-    <Meter
-      round
-      size="small"
-      type="circle"
-      background="light-2"
-      values={[{ value: data.percent }]}
-    />
+    {/* pic */}
+    <Box
+      height="small"
+      width="small"
+      round="small"
+    >
+      <Image style={{ borderRadius: 15}} fit="cover" src={data.img} />
+    </Box>
   </Box>
 );

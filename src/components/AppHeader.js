@@ -21,16 +21,18 @@ export const AppHeader = ({ appName, open }) => (
     justify="between"
     responsive={false}
   >
-    <Box
-      pad={{ horizontal: "medium", vertical: "small" }}
-      responsive={false}
-      direction="row"
-      align="center"
-      gap="small"
-    >
-      <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
-      <Avatar url="/scd_logo.png" />
-    </Box>
+    <a href="/">
+      <Box
+        pad={{ horizontal: "medium", vertical: "small" }}
+        responsive={false}
+        direction="row"
+        align="center"
+        gap="small"
+      >
+        <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
+        <Avatar url="/scd_logo.png" />
+      </Box>
+    </a>
     <div style={{ fontFamily: "Blinker" }}>
       <ResponsiveContext.Consumer>
         {responsive =>
