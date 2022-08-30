@@ -47,29 +47,31 @@ class AppBody extends Component {
                 appName={""}
                 appIcon={<Menu />}
               />
-              {/*  MAIN INDEX HOME CONTENT  */}
-              <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
+              {/*  MAIN CONTENT  */}
+              <Switch>
+                <Route path="/">
+                  <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
 
-                <Box flex={false} direction="row-responsive" wrap>
-                  <Box gap="large" flex="grow" margin="medium">
-                    <Main pad="large" style={{ color: "whitesmoke" }}>
-                      {/* index home logo */}
-                      <Box height="small" alignSelf="center" className="animate__animated animate__fadeIn animate__slower" width="small">
-                        <Image fit="contain" src="/scd_logo.png" />
-                      </Box>
-                      <Box style={{ overflow: "hidden" }} alignSelf="center" align="center">
-                        <div className="animate__animated animate__fadeInUp animate__delay-1s" align="center" >
-                          <Heading alignSelf="center" align="center" level={1} className="title">{org.fullName}</Heading>
-                          <Paragraph className="paragraph" color="light-6" alignSelf="center" align="center"><Markdown>{org.preamble}</Markdown></Paragraph>
-                          <Box alignSelf="center" align="center">
-                            <Button style={{ width: "100%" }} primary label="Join Today" href={org.url} target="_blank" />
+                    <Box flex={false} direction="row-responsive" wrap>
+                      <Box gap="large" flex="grow" margin="medium">
+                        <Main pad="large" style={{ color: "whitesmoke" }}>
+                          {/* index home logo */}
+                          <Box height="small" alignSelf="center" className="animate__animated animate__fadeIn animate__slower" width="small">
+                            <Image fit="contain" src="/scd_logo.png" />
                           </Box>
-                        </div>
+                          <Box style={{ overflow: "hidden" }} alignSelf="center" align="center">
+                            <div className="animate__animated animate__fadeInUp animate__delay-1s" align="center" >
+                              <Heading alignSelf="center" align="center" level={1} className="title">{org.fullName}</Heading>
+                              <Paragraph className="paragraph" color="light-6" alignSelf="center" align="center"><Markdown>{org.preamble}</Markdown></Paragraph>
+                              <Box alignSelf="center" align="center">
+                                <Button style={{ width: "100%" }} primary label="Join Today" href={org.url} target="_blank" />
+                              </Box>
+                            </div>
+                          </Box>
+                        </Main>
                       </Box>
-                    </Main>
-                  </Box>
 
-                  {/* <WorldMap
+                      {/* <WorldMap
                     color="neutral-1"
                     continents={[
                       {
@@ -88,11 +90,11 @@ class AppBody extends Component {
                     selectColor="accent-2"
                   /> */}
 
-
-                </Box>
-              </Box>
+                    </Box>
+                  </Box>
+                </Route>
+              </Switch>
             </Box>
-
           </div>
         </Grommet>
       </Router>

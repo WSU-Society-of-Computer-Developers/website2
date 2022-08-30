@@ -1,5 +1,5 @@
 import React from "react";
-
+import { pages } from "../data";
 import {
   Anchor,
   Box,
@@ -29,37 +29,31 @@ export const AppHeader = ({ appName, open }) => (
       gap="small"
     >
       <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
-      <Avatar url="/scd_logo.png"/>
+      <Avatar url="/scd_logo.png" />
     </Box>
-    <div style={{fontFamily: "Blinker"}}>
-    <ResponsiveContext.Consumer>
-      {responsive =>
-        responsive === "small" ? (
-          <Menu
-            dropAlign={{ right: "right", top: "top" }}
-            label="More"
-            items={[
-              { label: "One", href: "#" },
-              { label: "two", href: "#" },
-              { label: "Three", href: "#" }
-            ]}
-          />
-        ) : (
-          <Box
-            margin={{ left: "medium" }}
-            round="xsmall"
-            background={{ opacity: "weak" }}
-            direction="row"
-            align="center"
-            pad={{ horizontal: "small" }}
-          >
-            <Anchor href="" label="One" margin="small" />
-            <Anchor href="" label="Two" margin="small" />
-            <Anchor href="" label="Three" margin="small" />
-          </Box>
-        )
-      }
-    </ResponsiveContext.Consumer>
+    <div style={{ fontFamily: "Blinker" }}>
+      <ResponsiveContext.Consumer>
+        {responsive =>
+          responsive === "small" ? (
+            <Menu
+              dropAlign={{ right: "right", top: "top" }}
+              label="More"
+              items={pages.map(([label, href]) => { return { label, href } })}
+            />
+          ) : (
+            <Box
+              margin={{ left: "medium" }}
+              round="xsmall"
+              background={{ opacity: "weak" }}
+              direction="row"
+              align="center"
+              pad={{ horizontal: "small" }}
+            >
+              {pages.map(([label, href]) => { return <Anchor href={href} label={label} margin="small" /> })}
+            </Box>
+          )
+        }
+      </ResponsiveContext.Consumer>
     </div>
   </Box>
 );

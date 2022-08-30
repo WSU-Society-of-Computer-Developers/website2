@@ -13,3 +13,11 @@ export const socials = {
   "Facebook": "https://www.facebook.com/scdwsu",
   "Twitter": "https://twitter.com/scd_wsu"
 }
+
+// SCHEMA:
+//   pages => [page => [label, location]]
+export const pages = [
+  ["Team", "/team"],
+  ["Donate", "/donate"],
+  ["Gallery", "/gallery"]
+]
