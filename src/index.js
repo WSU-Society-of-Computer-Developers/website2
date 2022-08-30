@@ -11,7 +11,9 @@ import {
   Heading,
   Paragraph,
   WorldMap,
-  Grid
+  Image,
+  Grid,
+  Markdown
 } from "grommet";
 import { Search, Menu } from "grommet-icons";
 import { theme } from "./theme";
@@ -25,42 +27,49 @@ import {
 } from "./components";
 import { hardware, org } from "./data";
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 class AppBody extends Component {
   static contextType = ResponsiveContext;
 
   render() {
     return (
-      <Grommet theme={theme} full>
-        <div className="bg">
-          <Box fill>
-            <AppHeader
-              appName={""}
-              appIcon={<Menu />}
-            />
-            <Box flex overflow="auto" gap="medium" pad="medium">
-              <Grid rows={['xxsmall', 'xsmall']} columns={['large', 'large']} gap="small">
-              {/*  <Box
-              flex={false}
-              overflow="auto"
-              round="large"
-              background={{ color: "dark-5", opacity: "weak" }}
-              direction="row"
-              align="center"
-              pad={{ horizontal: "medium", vertical: "small" }}
-              margin={{ horizontal: "medium", top: "medium" }}
-            >
-              <Search color="brand" />
-              <TextInput plain placeholder="Search Cluster" type="search" />
-            </Box> */}
-              <Box flex={false} direction="row" wrap>
-                <Box gap="large" flex="grow" margin="medium">
-                  <Main pad="large" style={{ color: "whitesmoke" }}>
-                    <Heading level={1} className="title">{org.fullName}</Heading>
-                    <Paragraph className="paragraph" color="light-6">{org.preamble}</Paragraph>
-                  </Main>
-                </Box>
-                
-                  <WorldMap
+      <Router>
+        <Grommet theme={theme} full>
+          <div className="bg">
+            <Box fill>
+              <AppHeader
+                appName={""}
+                appIcon={<Menu />}
+              />
+              {/*  MAIN INDEX HOME CONTENT  */}
+              <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
+
+                <Box flex={false} direction="row-responsive" wrap>
+                  <Box gap="large" flex="grow" margin="medium">
+                    <Main pad="large" style={{ color: "whitesmoke" }}>
+                      {/* index home logo */}
+                      <Box height="small" alignSelf="center" className="animate__animated animate__fadeIn animate__slower" width="small">
+                        <Image fit="contain" src="/scd_logo.png" />
+                      </Box>
+                      <Box style={{ overflow: "hidden" }} alignSelf="center" align="center">
+                        <div className="animate__animated animate__fadeInUp animate__delay-1s" align="center" >
+                          <Heading alignSelf="center" align="center" level={1} className="title">{org.fullName}</Heading>
+                          <Paragraph className="paragraph" color="light-6" alignSelf="center" align="center"><Markdown>{org.preamble}</Markdown></Paragraph>
+                          <Box alignSelf="center" align="center">
+                            <Button style={{ width: "100%" }} primary label="Join Today" href={org.url} target="_blank" />
+                          </Box>
+                        </div>
+                      </Box>
+                    </Main>
+                  </Box>
+
+                  {/* <WorldMap
                     color="neutral-1"
                     continents={[
                       {
@@ -77,38 +86,16 @@ class AppBody extends Component {
                       },
                     ]}
                     selectColor="accent-2"
-                  />
-            
+                  /> */}
 
-                {/*  <Box flex="grow" margin="medium">
-                  <Hardware data={hardware} />
-                </Box> */}
 
+                </Box>
               </Box>
-              </Grid>
             </Box>
 
-            {/*  <Box
-            flex={false}
-            pad={{ vertical: "xsmall", left: "medium" }}
-            responsive={false}
-            background={{ color: "brand", dark: false }}
-            direction="row"
-            align="center"
-            justify="between"
-          >
-            <Text color="light-1">5 Running Tasks</Text>
-            <Button
-              size="medium"
-              label="Show Tasks"
-              icon={<Menu color="white" />}
-              reverse={true}
-            />
-          </Box> */}
-          </Box>
-
-        </div>
-      </Grommet>
+          </div>
+        </Grommet>
+      </Router>
     );
   }
 }
