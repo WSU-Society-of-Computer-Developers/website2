@@ -40,28 +40,62 @@ members => [
 ]
 
 */
-// TODO: ADD TEAM EMAILS HERE
+// TODO: change "major" property to represent something else
 export const teamMembers = [
   {
     name: "Kelly Whitlock",
     major: "Computer Science",
     title: "President",
-    contact: "mailto:xxxx@wayne.edu", // THIS IS AN HREF
-    img: "https://github.com/WSU-Society-of-Computer-Developers/Website/blob/main/images/Kelly_w.jpg?raw=true"
+    contact: "mailto:fr6097@wayne.edu", // THIS IS AN HREF
+    img: "/ppl/Kelly_Whitlock.jpg"
   },
   {
     name: "Mohammed Ali",
     major: "Computer Science",
     title: "Vice President",
-    contact: "mailto:xxxx@wayne.edu",
-    img: "https://github.com/WSU-Society-of-Computer-Developers/Website/blob/main/images/Mohammed-Ali.png?raw=true"
+    contact: "mailto:fj2851@wayne.edu",
+    img: "/ppl/Mohammed_Ali.jpg"
   },
   {
     name: "Zavaar Shah",
     major: "Computer Science",
     title: "Software Lead",
     contact: "mailto:hh3509@wayne.edu",
-    img: "https://showcase.zavaar.net/pics/me_3_prof_bg_2.jpg"
+    img: "/ppl/Zavaar_Shah.jpg"
   },
-
+  {
+    name: "Masrur Tajwar",
+    major: "Computer Science",
+    title: "Secretary",
+    contact: "mailto:gf6769@wayne.edu",
+    img: "/ppl/Masrur_Tajwar.jpg"
+  },
+  {
+    name: "Aakash Mukhi",
+    major: "Computer Science",
+    title: "Data Lead",
+    contact: "mailto:fp8515@wayne.edu",
+    img: "/ppl/Aakash_Mukhi.png"
+  },
+  {
+    name: "Oke Amuwha",
+    major: "Computer Science",
+    title: "Web Lead",
+    contact: "mailto:gv4281@wayne.edu",
+    img: null
+  },
+  {
+    name: "Hani Kandalaft",
+    // major: "???",
+    title: "Student Advisor",
+    contact: "mailto:gv5771@wayne.edu",
+    img: "/ppl/Hani_Kandalaft.png"
+  },
+  {
+    name: "Yousra Zouani",
+    // major: "???",
+    title: "Treasurer",
+    contact: "mailto:gv4281@wayne.edu",
+    img: null
+  },
 ]
