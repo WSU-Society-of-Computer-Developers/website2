@@ -82,7 +82,7 @@ export const teamMembers = [
     major: "Computer Science",
     title: "Web Lead",
     contact: "mailto:gv4281@wayne.edu",
-    img: null
+    img: "/ppl/Oke_Amuwha.jpg"
   },
   {
     name: "Hani Kandalaft",
@@ -96,6 +96,6 @@ export const teamMembers = [
     // major: "???",
     title: "Treasurer",
     contact: "mailto:gv4281@wayne.edu",
-    img: null
+    img: "/ppl/Yousra_Zouani.jpg"
   },
 ]
