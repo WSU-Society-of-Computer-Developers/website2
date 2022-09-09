@@ -19,6 +19,8 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
+import Donate from "./pages/Donate";
+import Contact from "./pages/Contact";
 
 class AppBody extends Component {
   static contextType = ResponsiveContext;
@@ -38,6 +40,12 @@ class AppBody extends Component {
                 <Switch>
                   <Router path="/team">
                     <Team />
+                  </Router>
+                  <Router path="/donate">
+                    <Donate/>
+                  </Router>
+                  <Router path="/contact">
+                    <Contact/>
                   </Router>
                   <Route path="/">
                     <Home />

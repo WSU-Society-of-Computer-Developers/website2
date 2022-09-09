@@ -10,7 +10,7 @@ import {
     Markdown
 } from "grommet";
 
-import React, { Component } from "react";
+import React from "react";
 export default function Home() {
     return <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
 

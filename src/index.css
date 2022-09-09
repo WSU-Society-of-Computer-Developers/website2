@@ -44,3 +44,21 @@ html {
 .paragraph {
     font-family: "Blinker", sans-serif;
 }
+
+.paypal-donate {
+  transform-origin: bottom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+}
+
+.paypal-donate:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-7px);}
+  100% { transform: translateY(0);}
+}

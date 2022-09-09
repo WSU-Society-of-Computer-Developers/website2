@@ -12,7 +12,7 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
     pad="medium"
     background="black"
     round="small"
-    className="animate__animated animate__zoomIn"
+    className="animate__animated animate__fadeInUp animate__fast"
     style={{ marginBottom: 10 }}
   >
     <Box gap="small">
@@ -31,9 +31,9 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
         <Text color="gray" size="small">
           {data.title}
         </Text>
-        <Text color="light-4" size="small">
+        {/* <Text color="light-4" size="small">
           {data.major}
-        </Text>
+        </Text> */}
         {data.contact && <Button secondary href={data.contact} target="_blank"><Mail /></Button>}
       </Box>
     </Box>
