@@ -21,6 +21,7 @@ import Home from "./pages/Home";
 import Team from "./pages/Team";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 class AppBody extends Component {
   static contextType = ResponsiveContext;
@@ -38,17 +39,20 @@ class AppBody extends Component {
               {/*  MAIN CONTENT  */}
               <div style={{ overflowY: "scroll" }}>
                 <Switch>
-                  <Router path="/team">
+                  <Router exact path="/team">
                     <Team />
                   </Router>
-                  <Router path="/donate">
+                  <Router exact path="/donate">
                     <Donate/>
                   </Router>
-                  <Router path="/contact">
+                  <Router exact path="/contact">
                     <Contact/>
                   </Router>
-                  <Route path="/">
+                  <Route exact path="/">
                     <Home />
+                  </Route>
+                  <Route path="*">
+                    <NotFound/>
                   </Route>
                 </Switch>
               </div>

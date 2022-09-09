@@ -21,7 +21,7 @@ export const pages = [
   ["Home", "/"],
   ["Team", "/team"],
   ["Donate", "/donate"],
-  ["Gallery", "/gallery"],
+  ["Events", "/events"],
   ["Contact Us", "/contact"]
 ]
 

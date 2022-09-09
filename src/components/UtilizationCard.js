@@ -34,7 +34,7 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
         {/* <Text color="light-4" size="small">
           {data.major}
         </Text> */}
-        {data.contact && <Button secondary href={data.contact} target="_blank"><Mail /></Button>}
+        {data.contact && <Button secondary href={data.contact} target="_blank"><Mail color="brand" /></Button>}
       </Box>
     </Box>
   </Box>

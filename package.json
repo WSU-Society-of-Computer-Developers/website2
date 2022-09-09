@@ -5,13 +5,14 @@
   "keywords": [],
   "main": "index.js",
   "dependencies": {
-    "grommet": "2.11.0",
+    "grommet": "^2.25.3",
     "grommet-icons": "4.4.0",
+    "markdown-to-jsx": "^7.1.7",
     "react": "^16.6.1",
     "react-animations": "^1.0.0",
     "react-dom": "^16.6.1",
     "react-router-dom": "5.1.2",
-    "styled-components": "5.0.1"
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "react-scripts": "1.0.0"
