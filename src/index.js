@@ -23,6 +23,7 @@ import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import Events from "./pages/Events";
+import Gallery from "./pages/Gallery";
 
 class AppBody extends Component {
   static contextType = ResponsiveContext;
@@ -51,6 +52,9 @@ class AppBody extends Component {
                   </Router>
                   <Router exact path="/events">
                     <Events/>
+                  </Router>
+                  <Router exact path="/gallery">
+                    <Gallery/>
                   </Router>
                   <Route exact path="/">
                     <Home />

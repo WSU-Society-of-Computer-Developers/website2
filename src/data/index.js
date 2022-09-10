@@ -2,7 +2,7 @@ export const org = {
   fullName: "Society of Computer Developers",
   shortName: "SCD",
   // NOTE: preamble supports markdown
-  preamble: `Established in Fall 2021 as [Wayne State](https://wayne.edu)’s only Computer Science organization, SCD is focused on creating opportunities for students interested in coding and development. We aim to provide a community of peers that support one another in coding, resume building, networking, and developing new skills. You don’t have to be a CS major or know anything about CS to join!`,
+  preamble: `Established in Fall 2021 as [Wayne State](https://wayne.edu)'s only Computer Science organization, SCD is focused on creating opportunities for students interested in coding and development. We aim to provide a community of peers that support one another in coding, resume building, networking, and developing new skills. You don’t have to be a CS major or know anything about CS to join!`,
   location: "Wayne State University - Detroit, MI",
   "url": "https://getinvolved.wayne.edu/organization/scd"
 }
@@ -22,9 +22,23 @@ export const pages = [
   ["Team", "/team"],
   ["Donate", "/donate"],
   ["Events", "/events"],
+  ["Gallery", "/gallery"],
   ["Contact Us", "/contact"]
 ]
 
+// Gallery Schema:
+/* 
+  images => [
+    image => {
+      img: String // url for image (relative or absolute)
+      caption: String // **MARKDOWN SUPPORTED** caption displayed under the image 
+    }
+  ]
+*/
+export const images = [
+  { img: "//v2.grommet.io/assets/Wilderpeople_Ricky.jpg", caption: "This is a background" },
+  { img: "//v2.grommet.io/assets/IMG_4245.jpg", caption: "[Markdown](https://www.markdownguide.org/) is supported" },
+]
 
 
 // Schema:
@@ -38,7 +52,6 @@ members => [
     img: String // URL for image
   }
 ]
-
 */
 // TODO: change "major" property to represent something else
 export const teamMembers = [
