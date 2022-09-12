@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Heading, Image, Tip, Paragraph, TextInput, TextArea, Form, Carousel } from "grommet";
 import { images } from "../data";
-import Markdown from 'markdown-to-jsx/dist/index.js'; // solution by https://github.com/probablyup/markdown-to-jsx/issues/333#issuecomment-731148699
+import Markdown from 'markdown-to-jsx'; // solution by https://github.com/probablyup/markdown-to-jsx/issues/333#issuecomment-731148699
 
 export default function Gallery() {
     const [active, setActive] = React.useState(0)

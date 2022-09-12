@@ -11,7 +11,7 @@ import {
 } from "grommet";
 import React from "react";
 import IconHandler from "../components/IconHandler";
-import Markdown from 'markdown-to-jsx/dist/index.js'; // solution by https://github.com/probablyup/markdown-to-jsx/issues/333#issuecomment-731148699
+import Markdown from 'markdown-to-jsx'; // solution by https://github.com/probablyup/markdown-to-jsx/issues/333#issuecomment-731148699
 
 export default function Home() {
     return <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
