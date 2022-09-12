@@ -53,14 +53,12 @@ class AppBody extends Component {
               {/*  MAIN CONTENT  */}
               <div style={{ overflowY: "scroll" }}>
                 <Switch>
-                  {
-                    pages.map(
-                      ([label, location], index) =>
-                        <Router exact path={'/' + location.split('/').pop()}>
-                          {pageComps[index]}
-                        </Router>
-                    )
-                  }
+                  {pages.map(
+                    ([label, location], index) =>
+                      <Router exact path={'/' + location.split('/').pop()}>
+                        {pageComps[index]}
+                      </Router>
+                  )}
                   <Route path="*">
                     <NotFound />
                   </Route>
