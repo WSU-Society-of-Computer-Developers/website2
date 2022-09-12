@@ -1,9 +1,10 @@
 {
   "name": "scdwebsite",
-  "version": "0.0.1",
+  "version": "0.0.6-1 ",
   "description": "scd main website",
+  "homepage": ".",
   "keywords": [],
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "grommet": "^2.25.3",
     "grommet-icons": "4.4.0",

@@ -19,11 +19,11 @@ export const socials = {
 //   pages => [page => [label, location]]
 export const pages = [
   ["Home", "/"],
-  ["Team", "/team"],
-  ["Donate", "/donate"],
-  ["Events", "/events"],
-  ["Gallery", "/gallery"],
-  ["Contact Us", "/contact"]
+  ["Team", "/#/team"],
+  ["Donate", "/#/donate"],
+  ["Events", "/#/events"],
+  ["Gallery", "/#/gallery"],
+  ["Contact", "/#/contact"]
 ]
 
 // Gallery Schema:
