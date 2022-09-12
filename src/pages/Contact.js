@@ -3,8 +3,8 @@ import { Box, Heading, FormField, Button, Paragraph, TextInput, TextArea, Form }
 import { socials } from "../data";
 
 export default function Contact() {
-
-    const [value, setValue] = React.useState({});
+    const initialState = { input: "" }
+    const [value, setValue] = React.useState(initialState);
     const handleSubmit = () => {
         if (!value.input) return alert("Please enter a message.")
         window.open(`${socials.Email}?body=${encodeURIComponent(value.input)}`, "_blank")
@@ -16,12 +16,12 @@ export default function Contact() {
             <Form
                 value={value}
                 onChange={nextValue => setValue(nextValue)}
-                onReset={() => setValue({})}
+                onReset={() => { setValue(initialState) }}
                 style={{ background: "#0a0a0a", padding: 25 }}
                 onSubmit={handleSubmit}
             >
                 <FormField name="name" htmlFor="text-input-id" label="Contact Form">
-                    <TextArea id="text-input-s" name="input" placeholder="Enter questions here..." />
+                    <TextArea id="text-input-id" name="input" placeholder="Enter questions here..." value={value.input} />
                 </FormField>
                 <Box direction="row" gap="medium">
                     <Button type="submit" primary label="Send" />
