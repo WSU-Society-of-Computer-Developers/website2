@@ -1,5 +1,5 @@
 export const org = {
-  fullName: "Society of Computer Developers",
+  fullName: "Society of Computer Developers - Preview Build v0.0.6-2",
   shortName: "SCD",
   // NOTE: preamble supports markdown
   preamble: `Established in Fall 2021 as [Wayne State](https://wayne.edu)'s only Computer Science organization, SCD is focused on creating opportunities for students interested in coding and development. We aim to provide a community of peers that support one another in coding, resume building, networking, and developing new skills. You don’t have to be a CS major or know anything about CS to join!`,
@@ -20,7 +20,7 @@ export const socials = {
 export const pages = [
   ["Home", "/"],
   ["Team", "/#/team"],
-  ["Donate", "/#/donate"],
+  // ["Donate", "/#/donate"],
   ["Events", "/#/events"],
   ["Gallery", "/#/gallery"],
   ["Contact", "/#/contact"]
@@ -36,7 +36,7 @@ export const pages = [
   ]
 */
 export const images = [
-  { img: "//v2.grommet.io/assets/Wilderpeople_Ricky.jpg", caption: "This is a background" },
+  { img: "//v2.grommet.io/assets/Wilderpeople_Ricky.jpg", caption: "This is a sample image." },
   { img: "//v2.grommet.io/assets/IMG_4245.jpg", caption: "[Markdown](https://www.markdownguide.org/) is supported" },
 ]
 
