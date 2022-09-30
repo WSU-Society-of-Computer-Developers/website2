@@ -18,12 +18,12 @@ export const socials = {
 // SCHEMA:
 //   pages => [page => [label, location]]
 export const pages = [
-  ["Home", "/"],
-  ["Team", "/#/team"],
-  ["Donate", "/#/donate"],
-  ["Events", "/#/events"],
-  ["Gallery", "/#/gallery"],
-  ["Contact", "/#/contact"]
+  ["Home", "./"],
+  ["Team", "#/team"],
+  ["Donate", "#/donate"],
+  ["Events", "#/events"],
+  ["Gallery", "#/gallery"],
+  ["Contact", "#/contact"]
 ]
 
 // Gallery Schema:
@@ -60,55 +60,55 @@ export const teamMembers = [
     major: "Computer Science",
     title: "President",
     contact: "mailto:fr6097@wayne.edu", // THIS IS AN HREF
-    img: "/ppl/Kelly_Whitlock.jpg"
+    img: "ppl/Kelly_Whitlock.jpg"
   },
   {
     name: "Mohammed Ali",
     major: "Computer Science",
     title: "Vice President",
     contact: "mailto:fj2851@wayne.edu",
-    img: "/ppl/Mohammed_Ali.jpg"
+    img: "ppl/Mohammed_Ali.jpg"
   },
   {
     name: "Zavaar Shah",
     major: "Computer Science",
     title: "Software Lead",
     contact: "mailto:hh3509@wayne.edu",
-    img: "/ppl/Zavaar_Shah.jpg"
+    img: "ppl/Zavaar_Shah.jpg"
   },
   {
     name: "Masrur Tajwar",
     major: "Computer Science",
     title: "Secretary",
     contact: "mailto:gf6769@wayne.edu",
-    img: "/ppl/Masrur_Tajwar.jpg"
+    img: "ppl/Masrur_Tajwar.jpg"
   },
   {
     name: "Aakash Mukhi",
     major: "Computer Science",
     title: "Data Lead",
     contact: "mailto:fp8515@wayne.edu",
-    img: "/ppl/Aakash_Mukhi.png"
+    img: "ppl/Aakash_Mukhi.png"
   },
   {
     name: "Oke Amuwha",
     major: "Computer Science",
     title: "Web Lead",
     contact: "mailto:gv4281@wayne.edu",
-    img: "/ppl/Oke_Amuwha.jpg"
+    img: "ppl/Oke_Amuwha.jpg"
   },
   {
     name: "Hani Kandalaft",
     // major: "???",
     title: "Student Advisor",
     contact: "mailto:gv5771@wayne.edu",
-    img: "/ppl/Hani_Kandalaft.png"
+    img: "ppl/Hani_Kandalaft.png"
   },
   {
     name: "Yousra Zouani",
     // major: "???",
     title: "Treasurer",
     contact: "mailto:gv4281@wayne.edu",
-    img: "/ppl/Yousra_Zouani.jpg"
+    img: "ppl/Yousra_Zouani.jpg"
   },
 ]

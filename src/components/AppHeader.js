@@ -30,7 +30,7 @@ export const AppHeader = ({ appName, open }) => (
         gap="small"
       >
         <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
-        <Avatar url="/scd_logo.png" />
+        <Avatar url="scd_logo.png" />
       </Box>
     </a>
     <div style={{ fontFamily: "Blinker" }}>
