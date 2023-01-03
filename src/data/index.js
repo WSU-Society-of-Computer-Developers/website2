@@ -18,7 +18,7 @@ export const socials = {
 // SCHEMA:
 //   pages => [page => [label, location]]
 export const pages = [
-  ["Home", "./"],
+  ["Home", "#/"],
   ["Team", "#/team"],
   ["Donate", "#/donate"],
   ["Events", "#/events"],

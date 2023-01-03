@@ -51,7 +51,7 @@ export const AppHeader = ({ appName, open }) => (
               align="center"
               pad={{ horizontal: "small" }}
             >
-              {pages.map(([label, href]) => { return <Anchor href={href} label={label} margin="small" /> })}
+              {pages.map(([label, href]) => <Anchor href={href} label={label} margin="small" /> )}
             </Box>
           )
         }

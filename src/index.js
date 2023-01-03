@@ -31,7 +31,7 @@ import { pages } from "./data";
 const pageComps = [
   <Home />,
   <Team />,
-  // <Donate />,
+  <Donate />,
   <Events />,
   <Gallery />,
   <Contact />
