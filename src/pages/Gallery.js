@@ -10,7 +10,7 @@ export default function Gallery() {
             <Heading className="title">Gallery</Heading>
             <Box height="medium" width="large" overflow="hidden">
                 <Carousel onChild={setActive} play={5000} fill>
-                    {images.map(({ img, caption }) => <Image key={caption} fit="cover" src={img} />)}
+                    {images.map(({ img, caption }) => <Image key={caption} alt={caption} fit="cover" src={img} />)}
                 </Carousel>
                 <Paragraph><Markdown>{images[active].caption}</Markdown></Paragraph>
             </Box>

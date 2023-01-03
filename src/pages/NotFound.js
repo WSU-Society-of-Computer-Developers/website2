@@ -16,7 +16,7 @@ export default function NotFound() {
                 <Main pad="large" style={{ color: "whitesmoke" }}>
                     {/* index home logo */}
                     <Box height="small" alignSelf="center" className="animate__animated animate__fadeIn" width="small">
-                        <Image fit="contain" src="/scd_logo.png" />
+                        <Image alt="SCD Logo" fit="contain" src="/scd_logo.png" />
                     </Box>
                     <Box style={{ overflow: "hidden" }} alignSelf="center" align="center">
                         <Heading alignSelf="center" align="center" level={1} className="title">404 - Not Found</Heading>
