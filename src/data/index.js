@@ -62,26 +62,26 @@ export const teamMembers = [
     contact: "mailto:fr6097@wayne.edu", // THIS IS AN HREF
     img: "ppl/Kelly_Whitlock.jpg"
   },
-  {
+/*   {
     name: "Mohammed Ali",
     major: "Computer Science",
     title: "Vice President",
     contact: "mailto:fj2851@wayne.edu",
     img: "ppl/Mohammed_Ali.jpg"
-  },
+  }, */ // RIP
   {
     name: "Zavaar Shah",
     major: "Computer Science",
-    title: "Software Lead",
+    title: "Vice President",
     contact: "mailto:hh3509@wayne.edu",
     img: "ppl/Zavaar_Shah.jpg"
   },
   {
-    name: "Masrur Tajwar",
+    name: "Cayden Koweck",
     major: "Computer Science",
     title: "Secretary",
-    contact: "mailto:gf6769@wayne.edu",
-    img: "ppl/Masrur_Tajwar.jpg"
+    contact: "mailto:hd6247@wayne.edu",
+    // img: "ppl/Cayden_Koweck.jpg"
   },
   {
     name: "Aakash Mukhi",
@@ -96,6 +96,18 @@ export const teamMembers = [
     title: "Web Lead",
     contact: "mailto:gv4281@wayne.edu",
     img: "ppl/Oke_Amuwha.jpg"
+  },
+  {
+    name: "Yasmin Shah",
+    title: "Event Coordinator",
+    contact: "mailto:hh4891@wayne.edu",
+    // img: "ppl/Yasmin_Shah.jpg"
+  },
+  {
+    name: "Nini Ola",
+    title: "Social Media Coordinator",
+    contact: "mailto:hd9510@wayne.edu",
+    // img: "ppl/Nini_Ola.jpg"
   },
   {
     name: "Hani Kandalaft",
