@@ -6,8 +6,9 @@ import { deepMerge } from "grommet/utils";
 import { grommet } from "grommet/themes";
 import React, { Component } from "react";
 import { VirtualMachinesCard, UtilizationCard } from "../components";
+import {theme as ogTheme} from "../theme";
 
-const theme = deepMerge({
+const theme = deepMerge(ogTheme,{
     global: {
         breakpoints: {
             small: {

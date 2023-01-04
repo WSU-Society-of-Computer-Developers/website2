@@ -10,7 +10,8 @@ export default function Donate() {
             <Heading className="title">Why Donate?</Heading>
             <Paragraph> (( Donate to SCD Because...  )) </Paragraph>
             <Paragraph>((Benefits include...))</Paragraph>
-            <PaypalEmbed />
+            {/* <PaypalEmbed /> */}
+            {/* TODO: add this PDF-> MD https://scribehow.com/shared/Wayne_Workflow__FjgiwL1EQbiYCxuPbWXV_g  */}
         </Box>
     )
 }

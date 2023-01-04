@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Text, Heading, Meter, Image, Button } from "grommet";
 import { StatusBadge, Avatar } from "../components";
 
-import { Mail } from "grommet-icons"
+import { Mail, CircleInformation } from "grommet-icons"
 
 export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
   <Box
@@ -34,7 +34,7 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
         {/* <Text color="light-4" size="small">
           {data.major}
         </Text> */}
-        {data.contact && <Button secondary href={data.contact} target="_blank"><Mail color="light-2" /></Button>}
+        {data.contact && <Button secondary href={data.contact} target="_blank">{data.name.split(" ").length == 2 ? <Mail color="brand" /> : <CircleInformation color="brand" />}</Button>}
       </Box>
     </Box>
   </Box>
