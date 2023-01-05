@@ -6,12 +6,11 @@ import PaypalEmbed from "../components/PaypalEmbed";
 
 export default function Donate() {
     return (
-        <Box flex overflow="auto" align="center" gap="small" pad="small" className="animate__animated animate__fadeInDown animate__fast" style={{ color: "whitesmoke" }}>
-            <Heading className="title">Why Donate?</Heading>
-            <Paragraph> (( Donate to SCD Because...  )) </Paragraph>
-            <Paragraph>((Benefits include...))</Paragraph>
+        <Box align="center" height="100%" gap="small" pad="small" className="animate__animated animate__fadeInDown animate__fast" style={{ color: "whitesmoke" }}>
+            <Heading className="title">Donate</Heading>
+            <a target="_blank" href="donoguide.pdf"><Button primary label="Get PDF Instructions"/></a>
+            <iframe style={{maxWidth: "100%", minWidth: "50%", borderRadius: 15}} width="90%" height="500" src="donoguide.html"></iframe>
             {/* <PaypalEmbed /> */}
-            {/* TODO: add this PDF-> MD https://scribehow.com/shared/Wayne_Workflow__FjgiwL1EQbiYCxuPbWXV_g  */}
         </Box>
     )
 }
