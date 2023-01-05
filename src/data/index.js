@@ -23,6 +23,7 @@ export const pages = [
   ["Team", "#/team"],
   ["Donate", "#/donate"],
   ["Events", "#/events"],
+  ["Workshops", "#/workshops"],
   ["Compete", "#/compete"],
   ["Gallery", "#/gallery"],
   ["Contact", "#/contact"],

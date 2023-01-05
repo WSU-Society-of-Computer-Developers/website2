@@ -27,6 +27,7 @@ import Gallery from "./pages/Gallery";
 import { pages } from "./data";
 import { Footer } from "./components/Footer";
 import Hackathon from "./pages/Hackathon";
+import Workshops from "./pages/Workshops";
 
 
 // NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data' 
@@ -35,6 +36,7 @@ const pageComps = [
   <Team />,
   <Donate />,
   <Events />,
+  <Workshops />,
   <Hackathon />,
   <Gallery />,
   <Contact />
