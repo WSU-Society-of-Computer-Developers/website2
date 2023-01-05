@@ -5,6 +5,12 @@ html {
     height: 100%;
 }
 
+/* RESPONSIVE MEDIAS */
+.Media {
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -30,7 +36,7 @@ html {
 
 
 .bg {
-    background-image: url("/bg.jpg");
+    background-image: url("./bg.jpg");
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,4 +49,27 @@ html {
 
 .paragraph {
     font-family: "Blinker", sans-serif;
+}
+
+.paypal-donate {
+  color: inherit;
+  transform-origin: bottom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+}
+
+.paypal-donate:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-7px);}
+  100% { transform: translateY(0);}
+}
+
+a.visited, a.link, a {
+  color: #6FFFB0;
 }

@@ -13,12 +13,29 @@ import {
 } from "./components";
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
+import Donate from "./pages/Donate";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import Events from "./pages/Events";
+import Gallery from "./pages/Gallery";
+import { pages } from "./data";
+
+
+// NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data' 
+const pageComps = [
+  <Home />,
+  <Team />,
+  <Donate />,
+  <Events />,
+  <Gallery />,
+  <Contact />
+]
 
 class AppBody extends Component {
   static contextType = ResponsiveContext;
@@ -36,11 +53,14 @@ class AppBody extends Component {
               {/*  MAIN CONTENT  */}
               <div style={{ overflowY: "scroll" }}>
                 <Switch>
-                  <Router path="/team">
-                    <Team />
-                  </Router>
-                  <Route path="/">
-                    <Home />
+                  {pages.map(
+                    ([label, location], index) =>
+                      <Router exact path={'/' + location.split('/').pop()}>
+                        {pageComps[index]}
+                      </Router>
+                  )}
+                  <Route path="*">
+                    <NotFound />
                   </Route>
                 </Switch>
               </div>

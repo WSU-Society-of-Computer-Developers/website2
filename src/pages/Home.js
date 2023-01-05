@@ -1,4 +1,4 @@
-import { org } from "../data";
+import { org, socials } from "../data";
 import {
     Box,
     Button,
@@ -7,10 +7,12 @@ import {
     Paragraph,
     WorldMap,
     Image,
-    Markdown
+    Nav,
 } from "grommet";
+import React from "react";
+import IconHandler from "../components/IconHandler";
+import Markdown from 'markdown-to-jsx/dist/index.js'; // solution by https://github.com/probablyup/markdown-to-jsx/issues/333#issuecomment-731148699
 
-import React, { Component } from "react";
 export default function Home() {
     return <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
 
@@ -19,20 +21,28 @@ export default function Home() {
                 <Main pad="large" style={{ color: "whitesmoke" }}>
                     {/* index home logo */}
                     <Box height="small" alignSelf="center" className="animate__animated animate__fadeIn animate__slower" width="small">
-                        <Image fit="contain" src="/scd_logo.png" />
+                        <Image alt="SCD Logo" fit="contain" src="scd_logo.png" />
                     </Box>
                     <Box style={{ overflow: "hidden" }} alignSelf="center" align="center">
                         <div className="animate__animated animate__fadeInUp animate__delay-1s" align="center" >
                             <Heading alignSelf="center" align="center" level={1} className="title">{org.fullName}</Heading>
-                            <Paragraph className="paragraph" color="light-6" alignSelf="center" align="center"><Markdown>{org.preamble}</Markdown></Paragraph>
+                            <Paragraph className="paragraph" color="light-6" alignSelf="center" align="center">
+                                <Box><Markdown>{org.preamble}</Markdown></Box></Paragraph>
                             <Box alignSelf="center" align="center">
                                 <Button style={{ width: "100%" }} primary label="Join Today" href={org.url} target="_blank" />
                             </Box>
+                            <Nav alignSelf="center" direction="row" justify="center" background="none" pad="small" flex>
+                                <IconHandler name="Email" url={socials.Email} icon="fa-solid fa-envelope" />
+                                <IconHandler name="Instagram" url={socials.Instagram} icon="fa-brands fa-instagram" />
+                                <IconHandler name="Twitter" url={socials.Twitter} icon="fa-brands fa-twitter-square" />
+                                <IconHandler name="Facebook" url={socials.Facebook} icon="fa-brands fa-square-facebook" />
+                                <IconHandler name="GetInvolved" url={socials.GetInvolved} icon="fa-solid fa-graduation-cap" />
+                                <IconHandler name="GitHub" url={socials.GitHub} icon="fa-brands fa-github" />
+                            </Nav>
                         </div>
                     </Box>
                 </Main>
             </Box>
-
             {/* <WorldMap
                     color="neutral-1"
                     continents={[
