@@ -37,6 +37,7 @@ export default function Home() {
                                 <IconHandler name="Twitter" url={socials.Twitter} icon="fa-brands fa-twitter-square" />
                                 <IconHandler name="Facebook" url={socials.Facebook} icon="fa-brands fa-square-facebook" />
                                 <IconHandler name="GetInvolved" url={socials.GetInvolved} icon="fa-solid fa-graduation-cap" />
+                                <IconHandler name="GitHub" url={socials.GitHub} icon="fa-brands fa-github" />
                             </Nav>
                         </div>
                     </Box>
