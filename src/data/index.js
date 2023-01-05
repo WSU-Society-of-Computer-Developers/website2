@@ -23,8 +23,9 @@ export const pages = [
   ["Team", "#/team"],
   ["Donate", "#/donate"],
   ["Events", "#/events"],
+  ["Compete", "#/compete"],
   ["Gallery", "#/gallery"],
-  ["Contact", "#/contact"]
+  ["Contact", "#/contact"],
 ]
 
 // Gallery Schema:
