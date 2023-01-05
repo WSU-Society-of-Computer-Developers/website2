@@ -1,10 +1,8 @@
 import React from "react";
 import { Box, Spinner, Heading, Paragraph } from "grommet";
-import Parser from 'rss-parser';
+import Parser from 'rss-parser/dist/rss-parser.min.js'; // es5 workaround https://github.com/rbren/rss-parser/issues/53#issuecomment-361978210
 import { UtilizationCard } from "../components";
-const parser = new Parser()
 // import { socials, images } from "../data";
-// TODO: add rss feed parser and render cards (like Team.js) as indivual events from getinvolved
 export default function Events() {
     const defaultMsg = "No events."
     const [events, setEvents] = React.useState()
@@ -12,7 +10,7 @@ export default function Events() {
         async function runFetch() {
             let url = "https://getinvolved.wayne.edu/organization/scd/events.rss"
             // let url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
-            const feed = await parser.parseURL(url)
+            const feed = await new Parser().parseURL(url)
             setEvents(feed.items.length > 0 ? feed.items : defaultMsg)
         }
         runFetch()
