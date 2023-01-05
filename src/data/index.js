@@ -13,7 +13,8 @@ export const socials = {
   "Instagram": "https://www.instagram.com/scd_wsu/",
   "Facebook": "https://www.facebook.com/scdwsu",
   "Twitter": "https://twitter.com/scd_wsu",
-  "GitHub": "https://github.com/WSU-Society-of-Computer-Developers"
+  "GitHub": "https://github.com/WSU-Society-of-Computer-Developers",
+  "YouTube": "https://www.youtube.com/channel/UCAdfexlccMiFANIx6WE4CrQ"
 }
 
 // SCHEMA:
@@ -23,6 +24,7 @@ export const pages = [
   ["Team", "#/team"],
   ["Donate", "#/donate"],
   ["Events", "#/events"],
+  ["Recordings", "#/recordings"],
   ["Compete", "#/compete"],
   ["Gallery", "#/gallery"],
   ["Contact", "#/contact"],
@@ -42,10 +44,25 @@ export const images = [
   { img: "//v2.grommet.io/assets/IMG_4245.jpg", caption: "[Markdown](https://www.markdownguide.org/) is supported" },
 ]
 
+// on /workshops page
+// @deprecated
+/* videos = [ 
+  video => { 
+      title: String // text to be shown above the video 
+      id: String // YouTube video id 
+      children?: ReactElement<any> 
+    }
+  ] 
+*/
+// export const videos = [
+//   { title: "React Web Development", id: "S7wWg11tZxM"},
+//   { title: "Docker & Containerization", id: "MrE1uvzuJW8" },
+//   { title: "Website Portfolio Project (Part 1)", id: "rCPJsQj-POI"}
+// ]
+
 
 // Schema:
 /* 
-
 members => [
   member => {
     name: String, 
@@ -64,13 +81,13 @@ export const teamMembers = [
     contact: "mailto:fr6097@wayne.edu", // THIS IS AN HREF
     img: "ppl/Kelly_Whitlock.jpg"
   },
-/*   {
-    name: "Mohammed Ali",
-    major: "Computer Science",
-    title: "Vice President",
-    contact: "mailto:fj2851@wayne.edu",
-    img: "ppl/Mohammed_Ali.jpg"
-  }, */ // RIP
+  /*   {
+      name: "Mohammed Ali",
+      major: "Computer Science",
+      title: "Vice President",
+      contact: "mailto:fj2851@wayne.edu",
+      img: "ppl/Mohammed_Ali.jpg"
+    }, */ // RIP
   {
     name: "Zavaar Shah",
     major: "Computer Science",
