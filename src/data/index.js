@@ -81,7 +81,7 @@ export const teamMembers = [
     major: "Computer Science",
     title: "Secretary",
     contact: "mailto:hd6247@wayne.edu",
-    // img: "ppl/Cayden_Koweck.jpg"
+    img: "ppl/Cayden_Koweck.jpg"
   },
   {
     name: "Aakash Mukhi",
@@ -101,7 +101,7 @@ export const teamMembers = [
     name: "Yasmin Shah",
     title: "Event Coordinator",
     contact: "mailto:hh4891@wayne.edu",
-    // img: "ppl/Yasmin_Shah.jpg"
+    img: "ppl/Yasmin_Shah.jpg"
   },
   {
     name: "Nini Ola",
