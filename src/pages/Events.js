@@ -6,13 +6,14 @@ const parser = new Parser()
 // import { socials, images } from "../data";
 // TODO: add rss feed parser and render cards (like Team.js) as indivual events from getinvolved
 export default function Events() {
+    const defaultMsg = "No events."
     const [events, setEvents] = React.useState()
     React.useEffect(() => {
         async function runFetch() {
-            // let rssFeed = "https://getinvolved.wayne.edu/organization/scd/events.rss"
-            let url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
+            let url = "https://getinvolved.wayne.edu/organization/scd/events.rss"
+            // let url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
             const feed = await parser.parseURL(url)
-            setEvents(feed.items)
+            setEvents(feed.items.length > 0 ? feed.items : defaultMsg)
         }
         runFetch()
     }, [])
@@ -25,13 +26,13 @@ export default function Events() {
                 sandbox="allow-scripts allow-same-origin allow-top-navigation"
                 allowTransparency="true" scrolling="no"
                 frameborder="0" height="600px" width="75%"></iframe> */}
-            {events ?
+            {Array.isArray(events) ?
                 events.map(({ title, link, contentSnippet, enclosure: { url } }) =>
                     <Box alignSelf="center" style={{ width: "35%", minWidth: 300 }} align="center" >
                         <UtilizationCard data={{ name: title, title: contentSnippet, contact: link, img: url }} />
                         {/* mismatched prop names are there because I intended to use those cards only for team page */}
                     </Box>
-                ) || <Paragraph>No events.</Paragraph> : <Spinner color="focus" />}
+                )  : events === defaultMsg ? <Paragraph>{defaultMsg}</Paragraph> : <Spinner color="focus" />}
         </Box>
     );
 }

@@ -12,7 +12,8 @@ export const socials = {
   "Email": "mailto:waynestatescd@gmail.com",
   "Instagram": "https://www.instagram.com/scd_wsu/",
   "Facebook": "https://www.facebook.com/scdwsu",
-  "Twitter": "https://twitter.com/scd_wsu"
+  "Twitter": "https://twitter.com/scd_wsu",
+  "GitHub": "https://github.com/WSU-Society-of-Computer-Developers"
 }
 
 // SCHEMA:
