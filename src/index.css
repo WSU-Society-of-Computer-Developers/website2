@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blinker:wght@300&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Blinker:wght@300&Lato:wght@300&family=Teko&display=swap');
 
 body,
 html {
     height: 100%;
+    font-family: "Lato";
 }
 
 /* RESPONSIVE MEDIAS */

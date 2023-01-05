@@ -25,6 +25,7 @@ import NotFound from "./pages/NotFound";
 import Events from "./pages/Events";
 import Gallery from "./pages/Gallery";
 import { pages } from "./data";
+import { Footer } from "./components/Footer";
 
 
 // NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data' 
@@ -64,6 +65,7 @@ class AppBody extends Component {
                   </Route>
                 </Switch>
               </div>
+              <Footer />
             </Box>
           </div>
         </Grommet>

@@ -21,18 +21,22 @@ export const AppHeader = ({ appName, open }) => (
     justify="between"
     responsive={false}
   >
-    <a href="/">
-      <Box
-        pad={{ horizontal: "medium", vertical: "small" }}
-        responsive={false}
-        direction="row"
-        align="center"
-        gap="small"
-      >
-        <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
-        <Avatar url="scd_logo.png" />
-      </Box>
-    </a>
+    <Box
+      pad={{ horizontal: "medium", vertical: "small" }}
+      responsive={false}
+      direction="row"
+      align="center"
+      gap="small"
+    >
+      {/* <Avatar name="logo" url="scd_logo.png" /> */}
+      <a href="#/">
+        <img src="scd_logo.png" width={30} height={30} />
+      </a>
+      <a target="_blank" href="https://wayne.edu/">
+        <img width={29} height={26} src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wayne_State_Warriors_primary_logo.svg/1200px-Wayne_State_Warriors_primary_logo.svg.png" />
+      </a>
+      <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
+    </Box>
     <div style={{ fontFamily: "Blinker" }}>
       <ResponsiveContext.Consumer>
         {responsive =>
@@ -51,7 +55,7 @@ export const AppHeader = ({ appName, open }) => (
               align="center"
               pad={{ horizontal: "small" }}
             >
-              {pages.map(([label, href]) => <Anchor href={href} label={label} margin="small" /> )}
+              {pages.map(([label, href]) => <Anchor href={href} label={label} margin="small" />)}
             </Box>
           )
         }
