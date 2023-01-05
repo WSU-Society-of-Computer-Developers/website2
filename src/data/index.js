@@ -1,3 +1,5 @@
+import { Gallery } from "./builders"
+
 export const org = {
   fullName: "Society of Computer Developers",
   shortName: "SCD",
@@ -39,10 +41,28 @@ export const pages = [
     }
   ]
 */
-export const images = [
-  { img: "//v2.grommet.io/assets/Wilderpeople_Ricky.jpg", caption: "This is a sample image." },
-  { img: "//v2.grommet.io/assets/IMG_4245.jpg", caption: "[Markdown](https://www.markdownguide.org/) is supported" },
-]
+export const images = new Gallery()
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/f0eaec97-9199-4aff-279a-08dab6692024/1500.jpg",
+    "SCD at Festifall")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/5ec0e5bf-afdc-4a53-dd1d-08dabb5f3f2a/600.jpg",
+    "General Body Meetings (1/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/63def811-6840-4606-2792-08dab6692024/600.jpg",
+    "General Body Meetings (2/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/aee7b032-28ee-4514-dd13-08dabb5f3f2a/600.jpg",
+    "General Body Meetings (3/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/07751377-b95c-4dbd-dd1b-08dabb5f3f2a/600.jpg",
+    "Game Night (1/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/c85641fe-4228-481f-278d-08dab6692024/600.jpg",
+    "Game Night (2/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/bcc1fc69-b8e4-4712-278c-08dab6692024/600.jpg",
+    "Game Night (3/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/6897c3ee-f62b-4279-dd1f-08dabb5f3f2a/600.jpg",
+    "1st place hack at the SCD Winter 2022 Virtual Hackathon")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/c58ef982-d138-427e-dd20-08dabb5f3f2a/600.jpg",
+    "2nd place hack at the SCD Winter 2022 Hackathon ")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/07cb1bd5-d002-4da2-dd22-08dabb5f3f2a/600.jpg",
+    "3rd place hack at the SCD Winter 2022 Hackathon")
+  .getSlides()
 
 // on /workshops page
 // @deprecated

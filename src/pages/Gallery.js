@@ -9,10 +9,11 @@ export default function Gallery() {
         <Box flex overflow="auto" className="animate__animated animate__fadeInDown animate__fast" align="center" gap="small" pad="small" style={{ color: "whitesmoke" }}>
             <Heading className="title">Gallery</Heading>
             <Box height="medium" width="large" overflow="hidden">
-                <Carousel onChild={setActive} play={5000} fill>
-                    {images.map(({ img, caption }) => <Image key={caption} alt={caption} fit="cover" src={img} />)}
+                <Carousel onChild={setActive} play={6000} fill>
+                    {images.map(({ img, caption }) => <Image onClick={() => { window.open(img) }}
+                        key={caption} alt={caption} fit="contain" src={img} />)}
                 </Carousel>
-                <Paragraph><Markdown>{images[active].caption}</Markdown></Paragraph>
+                <Paragraph alignSelf="center"><Markdown>{images[active].caption}</Markdown></Paragraph>
             </Box>
         </Box>
     );
