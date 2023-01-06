@@ -11,7 +11,7 @@ export default function Gallery() {
             <Box height="medium" width="large" overflow="hidden">
                 <Carousel onChild={setActive} play={6000} fill>
                     {images.map(({ img, caption }) => <Image onClick={() => { window.open(img) }}
-                        key={caption} alt={caption} fit="contain" src={img} />)}
+                        key={caption} alt={caption} style={{cursor: "zoom-in"}} fit="contain" src={img} />)}
                 </Carousel>
                 <Paragraph alignSelf="center"><Markdown>{images[active].caption}</Markdown></Paragraph>
             </Box>
