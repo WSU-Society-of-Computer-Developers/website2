@@ -1,3 +1,6 @@
+import Gallery from "./builders/gallery"
+import Team from "./builders/team"
+
 export const org = {
   fullName: "Society of Computer Developers",
   shortName: "SCD",
@@ -30,116 +33,42 @@ export const pages = [
   ["Contact", "#/contact"],
 ]
 
-// Gallery Schema:
-/* 
-  images => [
-    image => {
-      img: String // url for image (relative or absolute)
-      caption: String // **MARKDOWN SUPPORTED** caption displayed under the image 
-    }
-  ]
-*/
-export const images = [
-  { img: "//v2.grommet.io/assets/Wilderpeople_Ricky.jpg", caption: "This is a sample image." },
-  { img: "//v2.grommet.io/assets/IMG_4245.jpg", caption: "[Markdown](https://www.markdownguide.org/) is supported" },
-]
-
-// on /workshops page
-// @deprecated
-/* videos = [ 
-  video => { 
-      title: String // text to be shown above the video 
-      id: String // YouTube video id 
-      children?: ReactElement<any> 
-    }
-  ] 
-*/
-// export const videos = [
-//   { title: "React Web Development", id: "S7wWg11tZxM"},
-//   { title: "Docker & Containerization", id: "MrE1uvzuJW8" },
-//   { title: "Website Portfolio Project (Part 1)", id: "rCPJsQj-POI"}
-// ]
+/** @type {import("./builders/gallery")} */
+// FYI -> Gallery.addSlide(img: string, caption: string): Gallery
+export const images = new Gallery()
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/f0eaec97-9199-4aff-279a-08dab6692024/1500.jpg",
+    "SCD at Festifall")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/5ec0e5bf-afdc-4a53-dd1d-08dabb5f3f2a/600.jpg",
+    "General Body Meetings (1/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/63def811-6840-4606-2792-08dab6692024/600.jpg",
+    "General Body Meetings (2/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/aee7b032-28ee-4514-dd13-08dabb5f3f2a/600.jpg",
+    "General Body Meetings (3/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/07751377-b95c-4dbd-dd1b-08dabb5f3f2a/600.jpg",
+    "Game Night (1/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/c85641fe-4228-481f-278d-08dab6692024/600.jpg",
+    "Game Night (2/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/bcc1fc69-b8e4-4712-278c-08dab6692024/600.jpg",
+    "Game Night (3/3)")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/6897c3ee-f62b-4279-dd1f-08dabb5f3f2a/600.jpg",
+    "1st place hack at the SCD Winter 2022 Virtual Hackathon")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/c58ef982-d138-427e-dd20-08dabb5f3f2a/600.jpg",
+    "2nd place hack at the SCD Winter 2022 Hackathon ")
+  .addSlide("https://se-images-blob.campuslabs.com/documents/204/07cb1bd5-d002-4da2-dd22-08dabb5f3f2a/600.jpg",
+    "3rd place hack at the SCD Winter 2022 Hackathon")
+  .getSlides()
 
 
-// Schema:
-/* 
-members => [
-  member => {
-    name: String, 
-    major: String, // Extra information??/
-    contact?: String | undefined, // this is an href 
-    img: String // URL for image
-  }
-]
-*/
-// TODO: change "major" property to represent something else
-export const teamMembers = [
-  {
-    name: "Kelly Whitlock",
-    major: "Computer Science",
-    title: "President",
-    contact: "mailto:fr6097@wayne.edu", // THIS IS AN HREF
-    img: "ppl/Kelly_Whitlock.jpg"
-  },
-  /*   {
-      name: "Mohammed Ali",
-      major: "Computer Science",
-      title: "Vice President",
-      contact: "mailto:fj2851@wayne.edu",
-      img: "ppl/Mohammed_Ali.jpg"
-    }, */ // RIP
-  {
-    name: "Zavaar Shah",
-    major: "Computer Science",
-    title: "Vice President",
-    contact: "mailto:hh3509@wayne.edu",
-    img: "ppl/Zavaar_Shah.jpg"
-  },
-  {
-    name: "Cayden Koweck",
-    major: "Computer Science",
-    title: "Secretary",
-    contact: "mailto:hd6247@wayne.edu",
-    img: "ppl/Cayden_Koweck.jpg"
-  },
-  {
-    name: "Aakash Mukhi",
-    major: "Computer Science",
-    title: "Data Lead",
-    contact: "mailto:fp8515@wayne.edu",
-    img: "ppl/Aakash_Mukhi.png"
-  },
-  {
-    name: "Oke Amuwha",
-    major: "Computer Science",
-    title: "Web Lead",
-    contact: "mailto:gv4281@wayne.edu",
-    img: "ppl/Oke_Amuwha.jpg"
-  },
-  {
-    name: "Yasmin Shah",
-    title: "Event Coordinator",
-    contact: "mailto:hh4891@wayne.edu",
-    img: "ppl/Yasmin_Shah.jpg"
-  },
-  {
-    name: "Nini Ola",
-    title: "Social Media Coordinator",
-    contact: "mailto:hd9510@wayne.edu",
-    // img: "ppl/Nini_Ola.jpg"
-  },
-  {
-    name: "Hani Kandalaft",
-    // major: "???",
-    title: "Student Advisor",
-    contact: "mailto:gv5771@wayne.edu",
-    img: "ppl/Hani_Kandalaft.png"
-  },
-  {
-    name: "Yousra Zouani",
-    // major: "???",
-    title: "Treasurer",
-    contact: "mailto:gv4281@wayne.edu",
-    img: "ppl/Yousra_Zouani.jpg"
-  },
-]
+/** @type {import("./builders/team")} */
+// @type Team.addMember(name: string, title: string, contact: string, img: string | undefined): Team
+export const teamMembers = new Team()
+  .addMember("Kelley Whitlock", "President", "mailto:fr6097@wayne.edu", "ppl/Kelly_Whitlock.jpg")
+  .addMember("Zavaar Shah", "Vice President", "mailto:hh3509@wayne.edu", "ppl/Zavaar_Shah.jpg")
+  .addMember("Cayden Koweck", "Secretary", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
+  .addMember("Aakash Mukhi", "Data Lead", "mailto:fp8515@wayne.edu", "ppl/Aakash_Mukhi.png")
+  .addMember("Oke Amuwha", "Web Lead", "mailto:gv4281@wayne.edu", "ppl/Oke_Amuwha.jpg")
+  .addMember("Yasmin Shah", "Event Coordinator", "mailto:hh4891@wayne.edu", "ppl/Yasmin_Shah.jpg")
+  .addMember("Nini Ola", "Social Media Coordinator", "mailto:hd9510@wayne.edu")
+  .addMember("Hani Kandalaft", "Student Advisor", "mailto:gv5771@wayne.edu", "ppl/Hani_Kandalaft.png")
+  .addMember("Yousra Zouani", "Treasurer", "mailto:gv4281@wayne.edu", "ppl/Yousra_Zouani.jpg")
+  .getMembers()
