@@ -1,4 +1,5 @@
-import { Gallery } from "./builders"
+import Gallery from "./builders/gallery"
+import Team from "./builders/team"
 
 export const org = {
   fullName: "Society of Computer Developers",
@@ -32,15 +33,8 @@ export const pages = [
   ["Contact", "#/contact"],
 ]
 
-// Gallery Schema:
-/* 
-  images => [
-    image => {
-      img: String // url for image (relative or absolute)
-      caption: String // **MARKDOWN SUPPORTED** caption displayed under the image 
-    }
-  ]
-*/
+/** @type {import("./builders/gallery")} */
+// FYI -> Gallery.addSlide(img: string, caption: string): Gallery
 export const images = new Gallery()
   .addSlide("https://se-images-blob.campuslabs.com/documents/204/f0eaec97-9199-4aff-279a-08dab6692024/1500.jpg",
     "SCD at Festifall")
@@ -64,102 +58,17 @@ export const images = new Gallery()
     "3rd place hack at the SCD Winter 2022 Hackathon")
   .getSlides()
 
-// on /workshops page
-// @deprecated
-/* videos = [ 
-  video => { 
-      title: String // text to be shown above the video 
-      id: String // YouTube video id 
-      children?: ReactElement<any> 
-    }
-  ] 
-*/
-// export const videos = [
-//   { title: "React Web Development", id: "S7wWg11tZxM"},
-//   { title: "Docker & Containerization", id: "MrE1uvzuJW8" },
-//   { title: "Website Portfolio Project (Part 1)", id: "rCPJsQj-POI"}
-// ]
 
-
-// Schema:
-/* 
-members => [
-  member => {
-    name: String, 
-    major: String, // Extra information??/
-    contact?: String | undefined, // this is an href 
-    img: String // URL for image
-  }
-]
-*/
-// TODO: change "major" property to represent something else
-export const teamMembers = [
-  {
-    name: "Kelly Whitlock",
-    major: "Computer Science",
-    title: "President",
-    contact: "mailto:fr6097@wayne.edu", // THIS IS AN HREF
-    img: "ppl/Kelly_Whitlock.jpg"
-  },
-  /*   {
-      name: "Mohammed Ali",
-      major: "Computer Science",
-      title: "Vice President",
-      contact: "mailto:fj2851@wayne.edu",
-      img: "ppl/Mohammed_Ali.jpg"
-    }, */ // RIP
-  {
-    name: "Zavaar Shah",
-    major: "Computer Science",
-    title: "Vice President",
-    contact: "mailto:hh3509@wayne.edu",
-    img: "ppl/Zavaar_Shah.jpg"
-  },
-  {
-    name: "Cayden Koweck",
-    major: "Computer Science",
-    title: "Secretary",
-    contact: "mailto:hd6247@wayne.edu",
-    img: "ppl/Cayden_Koweck.jpg"
-  },
-  {
-    name: "Aakash Mukhi",
-    major: "Computer Science",
-    title: "Data Lead",
-    contact: "mailto:fp8515@wayne.edu",
-    img: "ppl/Aakash_Mukhi.png"
-  },
-  {
-    name: "Oke Amuwha",
-    major: "Computer Science",
-    title: "Web Lead",
-    contact: "mailto:gv4281@wayne.edu",
-    img: "ppl/Oke_Amuwha.jpg"
-  },
-  {
-    name: "Yasmin Shah",
-    title: "Event Coordinator",
-    contact: "mailto:hh4891@wayne.edu",
-    img: "ppl/Yasmin_Shah.jpg"
-  },
-  {
-    name: "Nini Ola",
-    title: "Social Media Coordinator",
-    contact: "mailto:hd9510@wayne.edu",
-    // img: "ppl/Nini_Ola.jpg"
-  },
-  {
-    name: "Hani Kandalaft",
-    // major: "???",
-    title: "Student Advisor",
-    contact: "mailto:gv5771@wayne.edu",
-    img: "ppl/Hani_Kandalaft.png"
-  },
-  {
-    name: "Yousra Zouani",
-    // major: "???",
-    title: "Treasurer",
-    contact: "mailto:gv4281@wayne.edu",
-    img: "ppl/Yousra_Zouani.jpg"
-  },
-]
+/** @type {import("./builders/team")} */
+// @type Team.addMember(name: string, title: string, contact: string, img: string | undefined): Team
+export const teamMembers = new Team()
+  .addMember("Kelley Whitlock", "President", "mailto:fr6097@wayne.edu", "ppl/Kelly_Whitlock.jpg")
+  .addMember("Zavaar Shah", "Vice President", "mailto:hh3509@wayne.edu", "ppl/Zavaar_Shah.jpg")
+  .addMember("Cayden Koweck", "Secretary", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
+  .addMember("Aakash Mukhi", "Data Lead", "mailto:fp8515@wayne.edu", "ppl/Aakash_Mukhi.png")
+  .addMember("Oke Amuwha", "Web Lead", "mailto:gv4281@wayne.edu", "ppl/Oke_Amuwha.jpg")
+  .addMember("Yasmin Shah", "Event Coordinator", "mailto:hh4891@wayne.edu", "ppl/Yasmin_Shah.jpg")
+  .addMember("Nini Ola", "Social Media Coordinator", "mailto:hd9510@wayne.edu")
+  .addMember("Hani Kandalaft", "Student Advisor", "mailto:gv5771@wayne.edu", "ppl/Hani_Kandalaft.png")
+  .addMember("Yousra Zouani", "Treasurer", "mailto:gv4281@wayne.edu", "ppl/Yousra_Zouani.jpg")
+  .getMembers()
