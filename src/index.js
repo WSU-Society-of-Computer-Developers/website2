@@ -56,7 +56,7 @@ class AppBody extends Component {
                 appIcon={<Menu />}
               />
               {/*  MAIN CONTENT  */}
-              <div style={{ overflowY: "scroll" }}>
+              <div style={{ overflowY: "scroll", marginBottom: "10vh" }}>
                 <Switch>
                   {pages.map(
                     ([label, location], index) =>

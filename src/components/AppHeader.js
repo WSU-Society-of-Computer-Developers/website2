@@ -8,7 +8,7 @@ import {
   ResponsiveContext,
   Text
 } from "grommet";
-import { Down } from "grommet-icons";
+import { Down, Menu as MenuIcon } from "grommet-icons";
 import { UserMenu } from ".";
 import { Avatar } from "./Avatar";
 export const AppHeader = ({ appName, open }) => (
@@ -43,7 +43,7 @@ export const AppHeader = ({ appName, open }) => (
           responsive === "small" ? (
             <Menu
               dropAlign={{ right: "right", top: "top" }}
-              label="More"
+              icon={<MenuIcon color="focus"/>}
               items={pages.map(([label, href]) => { return { label, href } })}
             />
           ) : (
