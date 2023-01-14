@@ -22,7 +22,7 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
         width="small"
         round="small"
       >
-        <Image style={{ borderRadius: 15 }} fit="cover" alt={url} src={data.img || "ppl/placeholder.jpg"} />
+        <Image style={{ borderRadius: 15 }} fit="cover" alt={data.name} src={data.img || "ppl/placeholder.jpg"} />
       </Box>
       <Box gap="xsmall">
         <Heading level="2" margin="none" size="small">

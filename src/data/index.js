@@ -5,7 +5,7 @@ export const org = {
   fullName: "Society of Computer Developers",
   shortName: "SCD",
   // NOTE: preamble supports markdown
-  preamble: `Established in Fall 2021 as [Wayne State](https://wayne.edu)'s only Computer Science organization, SCD is focused on creating opportunities for students interested in coding and development. We aim to provide a community of peers that support one another in coding, resume building, networking, and developing new skills. You don’t have to be a CS major or know anything about CS to join!`,
+  preamble: `Established in Fall 2021 as [Wayne State](https://wayne.edu)'s only Computer Science organization, SCD is focused on creating opportunities for students interested in coding and development. We aim to provide a community of peers that support one another in coding, resume building, networking, and developing new skills. You don't have to be a CS major or know anything about CS to join!`,
   location: "Wayne State University - Detroit, MI",
   "url": "https://getinvolved.wayne.edu/organization/scd"
 }
@@ -66,9 +66,8 @@ export const teamMembers = new Team()
   .addMember("Zavaar Shah", "Vice President", "mailto:hh3509@wayne.edu", "ppl/Zavaar_Shah.jpg")
   .addMember("Cayden Koweck", "Secretary", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
   .addMember("Aakash Mukhi", "Data Lead", "mailto:fp8515@wayne.edu", "ppl/Aakash_Mukhi.png")
-  .addMember("Oke Amuwha", "Web Lead", "mailto:gv4281@wayne.edu", "ppl/Oke_Amuwha.jpg")
   .addMember("Yasmin Shah", "Event Coordinator", "mailto:hh4891@wayne.edu", "ppl/Yasmin_Shah.jpg")
-  .addMember("Nini Ola", "Social Media Coordinator", "mailto:hd9510@wayne.edu")
+  .addMember("Nini Ola", "Social Media Coordinator", "mailto:hd9510@wayne.edu", "ppl/Nini_Ola.jpg")
   .addMember("Hani Kandalaft", "Student Advisor", "mailto:gv5771@wayne.edu", "ppl/Hani_Kandalaft.png")
   .addMember("Yousra Zouani", "Treasurer", "mailto:gv4281@wayne.edu", "ppl/Yousra_Zouani.jpg")
   .getMembers()

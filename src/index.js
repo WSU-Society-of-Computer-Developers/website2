@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useEffect } from "react";
 import { render } from "react-dom";
 import {
   Box,
@@ -16,6 +16,7 @@ import {
   HashRouter as Router,
   Switch,
   Route,
+  useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
@@ -44,7 +45,6 @@ const pageComps = [
 
 class AppBody extends Component {
   static contextType = ResponsiveContext;
-
   render() {
     return (
       <Router>
@@ -56,7 +56,7 @@ class AppBody extends Component {
                 appIcon={<Menu />}
               />
               {/*  MAIN CONTENT  */}
-              <div style={{ overflowY: "scroll" }}>
+              <div style={{ overflowY: "scroll", marginBottom: "10vh" }}>
                 <Switch>
                   {pages.map(
                     ([label, location], index) =>
@@ -77,9 +77,9 @@ class AppBody extends Component {
     );
   }
 }
-const App = () => (
-  <Grommet theme={theme} full>
+const App = () => {
+  return (<Grommet theme={theme} full>
     <AppBody />
-  </Grommet>
-);
+  </Grommet>)
+};
 render(<App />, document.getElementById("root"));

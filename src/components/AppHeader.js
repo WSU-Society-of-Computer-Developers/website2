@@ -8,7 +8,7 @@ import {
   ResponsiveContext,
   Text
 } from "grommet";
-import { Down } from "grommet-icons";
+import { Down, Menu as MenuIcon } from "grommet-icons";
 import { UserMenu } from ".";
 import { Avatar } from "./Avatar";
 export const AppHeader = ({ appName, open }) => (
@@ -30,10 +30,10 @@ export const AppHeader = ({ appName, open }) => (
     >
       {/* <Avatar name="logo" url="scd_logo.png" /> */}
       <a href="#/">
-        <img src="scd_logo.png" width={30} height={30} />
+        <img src="scd_logo.png" alt="SCD Logo" width={30} height={30} />
       </a>
       <a target="_blank" href="https://wayne.edu/">
-        <img width={29} height={26} src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wayne_State_Warriors_primary_logo.svg/1200px-Wayne_State_Warriors_primary_logo.svg.png" />
+        <img width={29} alt="WSU Logo" height={26} src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Wayne_State_Warriors_primary_logo.svg/1200px-Wayne_State_Warriors_primary_logo.svg.png" />
       </a>
       <Text className="title" style={{ fontSize: 30 }}>{appName}</Text>
     </Box>
@@ -43,7 +43,7 @@ export const AppHeader = ({ appName, open }) => (
           responsive === "small" ? (
             <Menu
               dropAlign={{ right: "right", top: "top" }}
-              label="More"
+              icon={<MenuIcon color="focus"/>}
               items={pages.map(([label, href]) => { return { label, href } })}
             />
           ) : (
