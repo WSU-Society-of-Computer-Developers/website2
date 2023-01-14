@@ -15,7 +15,7 @@ export const Footer = () => {
     return (<div style={stickyFooter}>
         <Foot background='black' pad="small" align="center" as="footer" justify="between">
             <a target="_blank" href="https://engineering.wayne.edu/">
-                <img className="Media" width="150" height="40vw" src="https://mac.wayne.edu/images/engineering_horz_color.png" />
+                <img alt="WSU Banner" className="Media" width="150" height="40vw" src="https://mac.wayne.edu/images/engineering_horz_color.png" />
             </a>
             <Anchor size="xsmall" label={`Copyright © ${new Date().getFullYear()} SCD`} />
         </Foot>
