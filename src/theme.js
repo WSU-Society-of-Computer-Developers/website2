@@ -1,5 +1,5 @@
-import { grommet } from "grommet";
-import { deepMerge, deepFreeze } from "grommet/utils";
+// import { grommet } from "grommet";
+import { deepFreeze } from "grommet/utils";
 
 // https://grommet-theme-builder.netlify.app/
 export const theme = deepFreeze({

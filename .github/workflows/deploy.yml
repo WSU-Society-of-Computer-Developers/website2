@@ -35,8 +35,6 @@ jobs:
 
     - name: Build
       run: npm run build
-      env:
-        CI: "" # to ignore warnings as errors (bad practice, i know)
         
     - name: Deploy
       if: github.event_name == 'push'

@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Heading, FormField, Button, Paragraph, TextInput, TextArea, Form, Tip } from "grommet";
+import { Box, Heading, Button} from "grommet";
 import { socials } from "../data";
-import Markdown from 'markdown-to-jsx/dist/index.js';
+// import Markdown from 'markdown-to-jsx/dist/index.js';
 import YouTubeEmbed from "../components/YouTubeEmbed";
 import { Youtube } from "grommet-icons";
 
@@ -17,7 +17,7 @@ export default function Workshops() {
             <Heading className="title">Recordings Playlist</Heading>
             {/* {videos.map((obj) => <Video {...obj} />)} */}
             <Video id="videoseries?list=PLMdbXAKJy69Qg4gb5o1XqV-a51ovCwmpv" />
-            <a target="_blank" href={socials.YouTube}>
+            <a target="_blank" rel="noopener noreferrer" href={socials.YouTube}>
                 <Button primary label={<Youtube color="focus" />} />
             </a>
         </Box>

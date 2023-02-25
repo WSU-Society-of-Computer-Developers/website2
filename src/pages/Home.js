@@ -5,7 +5,7 @@ import {
     Main,
     Heading,
     Paragraph,
-    WorldMap,
+    // WorldMap,
     Image,
     Nav,
 } from "grommet";
