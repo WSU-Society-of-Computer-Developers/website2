@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Heading, FormField, Button, Paragraph, TextInput, TextArea, Form } from "grommet";
+import { Box, FormField, Button, TextArea, Form } from "grommet";
 import { socials } from "../data";
 
 export default function Contact() {

@@ -28,7 +28,7 @@ export const pages = [
   ["Donate", "#/donate"],
   ["Events", "#/events"],
   ["Recordings", "#/recordings"],
-  ["Compete", "#/compete"],
+  ["Hackathon", "#/compete"],
   ["Gallery", "#/gallery"],
   ["Contact", "#/contact"],
 ]

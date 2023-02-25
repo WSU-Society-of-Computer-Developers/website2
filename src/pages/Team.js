@@ -1,11 +1,11 @@
 import { teamMembers } from "../data";
 
-import ReactDOM from "react-dom";
-import { Box, Grid, ResponsiveContext, Heading, Grommet } from "grommet";
+// import ReactDOM from "react-dom";
+import { Box, Grid, ResponsiveContext, Grommet } from "grommet";
 import { deepMerge } from "grommet/utils";
-import { grommet } from "grommet/themes";
-import React, { Component } from "react";
-import { VirtualMachinesCard, UtilizationCard } from "../components";
+// import { grommet } from "grommet/themes";
+import React from "react";
+import { UtilizationCard } from "../components";
 import {theme as ogTheme} from "../theme";
 
 const theme = deepMerge(ogTheme,{

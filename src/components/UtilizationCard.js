@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Text, Heading, Meter, Image, Button } from "grommet";
-import { StatusBadge, Avatar } from "../components";
+import { Box, Text, Heading, Image, Button } from "grommet";
+// import { StatusBadge, Avatar } from "../components";
 
 import { Mail, CircleInformation } from "grommet-icons"
 
@@ -34,7 +34,11 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
         {/* <Text color="light-4" size="small">
           {data.major}
         </Text> */}
-        {data.contact && <Button secondary href={data.contact} target="_blank">{data.name.split(" ").length == 2 ? <Mail color="brand" /> : <CircleInformation color="brand" />}</Button>}
+        {data.contact && <Button secondary href={data.contact} target="_blank">
+          {/* IF THE NAME IS TWO WORDS, WE ASSUME ITS A CARD FOR A PERSON AND IF ITS DESCRIPTION IS LESS THAN 4 WORDS, THE SAME APPLIES */}
+          {data.name.split(" ").length === 2 && data.title.split(" ").length < 4
+            ? <Mail color="brand" /> : <CircleInformation color="brand" />}
+        </Button>}
       </Box>
     </Box>
   </Box>

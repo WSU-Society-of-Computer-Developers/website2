@@ -1,11 +1,11 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
 import { render } from "react-dom";
 import {
   Box,
   Grommet,
   ResponsiveContext
 } from "grommet";
-import { Search, Menu } from "grommet-icons";
+import { Menu } from "grommet-icons";
 import { theme } from "./theme";
 import "./index.css"
 import {
@@ -16,7 +16,6 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  useLocation,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Team from "./pages/Team";
@@ -50,27 +49,29 @@ class AppBody extends Component {
       <Router>
         <Grommet theme={theme} full>
           <div className="bg">
-            <Box fill>
-              <AppHeader
-                appName={""}
-                appIcon={<Menu />}
-              />
-              {/*  MAIN CONTENT  */}
-              <div style={{ overflowY: "scroll", marginBottom: "10vh" }}>
-                <Switch>
-                  {pages.map(
-                    ([label, location], index) =>
-                      <Router exact path={'/' + location.split('/').pop()}>
-                        {pageComps[index]}
-                      </Router>
-                  )}
-                  <Route path="*">
-                    <NotFound />
-                  </Route>
-                </Switch>
-              </div>
-              <Footer />
-            </Box>
+            <React.StrictMode>
+              <Box fill>
+                <AppHeader
+                  appName={""}
+                  appIcon={<Menu />}
+                />
+                {/*  MAIN CONTENT  */}
+                <div style={{ overflowY: "scroll", marginBottom: "10vh" }}>
+                  <Switch>
+                    {pages.map(
+                      ([label, location], index) =>
+                        <Router exact path={'/' + location.split('/').pop()}>
+                          {pageComps[index]}
+                        </Router>
+                    )}
+                    <Route path="*">
+                      <NotFound />
+                    </Route>
+                  </Switch>
+                </div>
+                <Footer />
+              </Box>
+            </React.StrictMode>
           </div>
         </Grommet>
       </Router>
