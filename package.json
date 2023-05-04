@@ -6,6 +6,7 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "cspell": "^6.31.1",
     "grommet": "^2.25.3",
     "grommet-icons": "4.4.0",
     "markdown-to-jsx": "^7.1.7",
@@ -26,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy": "cspell ./src/data/index.js && npm run build",
     "deploy": "gh-pages -d build"
   }
 }
