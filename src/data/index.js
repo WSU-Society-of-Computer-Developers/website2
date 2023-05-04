@@ -17,6 +17,7 @@ export const socials = {
   "Facebook": "https://www.facebook.com/scdwsu",
   "Twitter": "https://twitter.com/scd_wsu",
   "GitHub": "https://github.com/WSU-Society-of-Computer-Developers",
+  "LinkedIn": "https://www.linkedin.com/company/society-of-computer-developers/",
   "YouTube": "https://www.youtube.com/channel/UCAdfexlccMiFANIx6WE4CrQ"
 }
 
@@ -62,12 +63,8 @@ export const images = new Gallery()
 /** @type {import("./builders/team")} */
 // @type Team.addMember(name: string, title: string, contact: string, img: string | undefined): Team
 export const teamMembers = new Team()
-  .addMember("Kelley Whitlock", "President", "mailto:fr6097@wayne.edu", "ppl/Kelly_Whitlock.jpg")
-  .addMember("Zavaar Shah", "Vice President", "mailto:hh3509@wayne.edu", "ppl/Zavaar_Shah.jpg")
-  .addMember("Cayden Koweck", "Secretary", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
-  .addMember("Aakash Mukhi", "Data Lead", "mailto:fp8515@wayne.edu", "ppl/Aakash_Mukhi.png")
+  .addMember("Zavaar Shah", "President", "mailto:zavaar.shah@wayne.edu", "ppl/Zavaar_Shah.jpg")
+  .addMember("Cayden Koweck", "Vice President", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
+  .addMember("Nini Ola", "Secretary", "mailto:hd9510@wayne.edu", "ppl/Nini_Ola.jpg")
   .addMember("Yasmin Shah", "Event Coordinator", "mailto:hh4891@wayne.edu", "ppl/Yasmin_Shah.jpg")
-  .addMember("Nini Ola", "Social Media Coordinator", "mailto:hd9510@wayne.edu", "ppl/Nini_Ola.jpg")
-  .addMember("Hani Kandalaft", "Student Advisor", "mailto:gv5771@wayne.edu", "ppl/Hani_Kandalaft.png")
-  .addMember("Yousra Zouani", "Treasurer", "mailto:gv4281@wayne.edu", "ppl/Yousra_Zouani.jpg")
   .getMembers()

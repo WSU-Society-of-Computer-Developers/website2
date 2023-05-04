@@ -4,8 +4,10 @@ import { Box, Text, Heading, Image, Button } from "grommet";
 
 import { Mail, CircleInformation } from "grommet-icons"
 
-export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
-  <Box
+export const UtilizationCard = ({ data, url, gridArea, ...rest }) => {
+  // IF THE NAME IS TWO WORDS, WE ASSUME ITS A CARD FOR A PERSON AND IF ITS DESCRIPTION IS LESS THAN 4 WORDS, THE SAME APPLIES 
+  const isTeamCard = data.name.split(" ").length === 2 && data.title.split(" ").length < 4
+  return <Box
     direction="column"
     justify="between"
     gap="small"
@@ -18,11 +20,12 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
     <Box gap="small">
       {/* pic */}
       <Box
-        height="small"
-        width="small"
         round="small"
+        width={isTeamCard ? "medium" : null}
+        height={isTeamCard ? "medium" : null}
+        direction="row"
       >
-        <Image style={{ borderRadius: 15 }} fit="cover" alt={data.name} src={data.img || "ppl/placeholder.jpg"} />
+        <Image style={{ borderRadius: 5 }} fit="cover" alt={data.name} src={data.img || "ppl/placeholder.jpg"} />
       </Box>
       <Box gap="xsmall">
         <Heading level="2" margin="none" size="small">
@@ -35,11 +38,10 @@ export const UtilizationCard = ({ data, url, gridArea, ...rest }) => (
           {data.major}
         </Text> */}
         {data.contact && <Button secondary href={data.contact} target="_blank">
-          {/* IF THE NAME IS TWO WORDS, WE ASSUME ITS A CARD FOR A PERSON AND IF ITS DESCRIPTION IS LESS THAN 4 WORDS, THE SAME APPLIES */}
-          {data.name.split(" ").length === 2 && data.title.split(" ").length < 4
-            ? <Mail color="brand" /> : <CircleInformation color="brand" />}
+         
+          { isTeamCard ? <Mail color="brand" /> : <CircleInformation color="brand" />}
         </Button>}
       </Box>
     </Box>
   </Box>
-);
+};
