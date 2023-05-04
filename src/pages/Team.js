@@ -12,7 +12,11 @@ export default function Team() {
     return <Box alignSelf="center" style={{ marginTop: 25 }} align="center">
         <div className="container">
             <div className="row">
-                {teamMembers.map((member) => <div className="col-lg-3 col-sm-6"><UtilizationCard data={{ ...member }} /></div>)}
+                {teamMembers.map((member) =>
+                    <div className="col-lg-3 col-sm-6">
+                        <UtilizationCard data={{ ...member }} />
+                    </div>
+                )}
             </div>
         </div>
     </Box>

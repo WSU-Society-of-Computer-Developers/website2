@@ -1,15 +1,17 @@
 import React from "react";
-import { Box, Spinner, Heading, Paragraph } from "grommet";
+import { Box, Spinner, Heading, Paragraph, Button } from "grommet";
 import Parser from 'rss-parser/dist/rss-parser.min.js'; // es5 workaround https://github.com/rbren/rss-parser/issues/53#issuecomment-361978210
 import { UtilizationCard } from "../components";
 // import { socials, images } from "../data";
+import Markdown from 'markdown-to-jsx/dist/index.js';
 export default function Events() {
+    const url = "https://getinvolved.wayne.edu/organization/scd/events.rss"
+    // const url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
+    // const url = "https://getinvolved.wayne.edu/organization/pmhsc/events.rss"
     const defaultMsg = "No events."
     const [events, setEvents] = React.useState()
     React.useEffect(() => {
         async function runFetch() {
-            let url = "https://getinvolved.wayne.edu/organization/scd/events.rss"
-            // let url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
             const feed = await new Parser().parseURL(url)
             setEvents(feed.items.length > 0 ? feed.items : defaultMsg)
         }
@@ -24,13 +26,18 @@ export default function Events() {
                 sandbox="allow-scripts allow-same-origin allow-top-navigation"
                 allowTransparency="true" scrolling="no"
                 frameborder="0" height="600px" width="75%"></iframe> */}
-            {Array.isArray(events) ?
-                events.map(({ title, link, contentSnippet, enclosure: { url } }) =>
-                    <Box alignSelf="center" style={{ width: "35%", minWidth: 300 }} align="center" >
-                        <UtilizationCard data={{ name: title, title: contentSnippet, contact: link, img: url }} />
-                        {/* mismatched prop names are there because I intended to use those cards only for team page */}
-                    </Box>
-                )  : events === defaultMsg ? <Paragraph>{defaultMsg}</Paragraph> : <Spinner color="focus" />}
+            <Button alignSelf="center" primary href={url.replace(".rss", "")} target="_blank" label="Events" />
+            <div className="container">
+                <div className="row justify-content-center">
+                    {Array.isArray(events) ?
+                        events.map(({ title, link, contentSnippet, enclosure: { url } }) =>
+                            <div className="col-md-6 "><Box alignSelf="center" align="center" >
+                                <UtilizationCard data={{ name: title, title: contentSnippet, contact: link, img: url }} />
+                                {/* mismatched prop names are there because I intended to use those cards only for team page */}
+                            </Box></div>
+                        ) : events === defaultMsg ? <Paragraph textAlign="center"><Markdown>{defaultMsg}</Markdown></Paragraph> : <Spinner color="focus" />}
+                </div>
+            </div>
         </Box>
     );
 }

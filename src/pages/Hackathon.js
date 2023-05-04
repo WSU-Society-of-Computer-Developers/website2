@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Heading, FormField, Button, Paragraph, TextInput, TextArea, Form } from "grommet";
-import { socials } from "../data";
+/* import { socials } from "../data";
 import Markdown from 'markdown-to-jsx/dist/index.js';
-import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom"; */
 
 /* const msg = `SCD will be attending and competing in many [MLH](https://mlh.io/) certified hackathon competitions this year! 
 In these competitions, teams of up to 4 people have 24-48 hours to complete a project related to the given prompt. 
