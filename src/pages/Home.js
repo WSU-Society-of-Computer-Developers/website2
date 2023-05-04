@@ -36,10 +36,10 @@ export default function Home() {
                         </Box>
                         <Nav alignSelf="center" direction="row" justify="center" background="none" pad="small" flex>
                             <IconHandler name="Email" url={socials.Email} icon="fa-solid fa-envelope" />
+                            <IconHandler name="LinkedIn" url={socials.LinkedIn} icon="fa-brands fa-linkedin" />
                             <IconHandler name="Instagram" url={socials.Instagram} icon="fa-brands fa-instagram" />
                             <IconHandler name="Twitter" url={socials.Twitter} icon="fa-brands fa-twitter-square" />
                             <IconHandler name="Facebook" url={socials.Facebook} icon="fa-brands fa-square-facebook" />
-                            <IconHandler name="GetInvolved" url={socials.GetInvolved} icon="fa-solid fa-graduation-cap" />
                             <IconHandler name="GitHub" url={socials.GitHub} icon="fa-brands fa-github" />
                         </Nav>
                     </div>

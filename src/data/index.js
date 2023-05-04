@@ -17,6 +17,7 @@ export const socials = {
   "Facebook": "https://www.facebook.com/scdwsu",
   "Twitter": "https://twitter.com/scd_wsu",
   "GitHub": "https://github.com/WSU-Society-of-Computer-Developers",
+  "LinkedIn": "https://www.linkedin.com/company/society-of-computer-developers/",
   "YouTube": "https://www.youtube.com/channel/UCAdfexlccMiFANIx6WE4CrQ"
 }
 
