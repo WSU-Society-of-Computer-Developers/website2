@@ -31,7 +31,7 @@ export default function Events() {
                 <div className="row justify-content-center">
                     {Array.isArray(events) ?
                         events.map(({ title, link, contentSnippet, enclosure: { url } }) =>
-                            <div className="col-md-6 "><Box alignSelf="center" align="center" >
+                            <div className="col-md-6"><Box alignSelf="center" align="center" >
                                 <UtilizationCard data={{ name: title, title: contentSnippet, contact: link, img: url }} />
                                 {/* mismatched prop names are there because I intended to use those cards only for team page */}
                             </Box></div>
