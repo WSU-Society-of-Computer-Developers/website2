@@ -26,7 +26,7 @@ export default function Home() {
                 <Box style={{ overflow: "hidden" }} alignSelf="center" align="center">
                     <div className="animate__animated animate__fadeInUp animate__delay-1s" align="center" >
                         <Heading alignSelf="center" align="center" level={1}
-                            style={{ maxWidth: "300", fontSize: "clamp(30px, 5.5vw, 120px)", whiteSpace: "pre" }}
+                            style={{ marginTop: 25,maxWidth: "300", fontSize: "clamp(30px, 5.5vw, 120px)", whiteSpace: "pre" }}
                             className="title">{org.fullName}</Heading>
                         <Paragraph className="paragraph" color="light-6" alignSelf="center" align="center" style={{ width: "73vw", minWidth: "50vw" }}>
                             <Markdown>{org.preamble}</Markdown>
