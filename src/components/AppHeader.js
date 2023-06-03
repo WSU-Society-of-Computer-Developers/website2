@@ -42,7 +42,7 @@ export const AppHeader = ({ appName, open }) => (
           responsive === "small" ? (
             <Menu
               dropAlign={{ right: "right", top: "top" }}
-              icon={<MenuIcon color="focus"/>}
+              icon={<MenuIcon color="focus" />}
               items={pages.map(([label, href]) => { return { label, href } })}
             />
           ) : (

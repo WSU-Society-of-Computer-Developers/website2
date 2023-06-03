@@ -17,7 +17,6 @@ export default function Home() {
     return <Box gridArea="main" style={{ textAlign: "center" }} flex overflow="auto" align="center" gap="small" pad="small">
 
         <Box flex="grow" direction="row-responsive" wrap>
-
             <Main pad="large" style={{ color: "whitesmoke" }} responsive>
                 {/* index home logo */}
                 <Box height="small" alignSelf="center" className="animate__animated animate__fadeIn animate__slower" width="small">
