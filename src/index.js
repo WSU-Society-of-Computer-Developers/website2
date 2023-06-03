@@ -28,12 +28,14 @@ import { pages } from "./data";
 import { Footer } from "./components/Footer";
 import Hackathon from "./pages/Hackathon";
 import Workshops from "./pages/Workshops";
+import Project from "./pages/Project";
 
 
 // NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data' 
 const pageComps = [
   <Home />,
   <Team />,
+  <Project/>,
   <Donate />,
   <Events />,
   <Workshops />,

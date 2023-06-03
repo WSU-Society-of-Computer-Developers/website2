@@ -1,6 +1,6 @@
 {
   "name": "scdwebsite",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "scd main website",
   "homepage": ".",
   "keywords": [],
@@ -27,7 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "cspell ./src/data/index.js && npm run build",
+    "spellCheck": "cspell ./src/data/index.js",
+    "predeploy": "npm run spellCheck && npm run build",
     "deploy": "gh-pages -d build"
   }
 }

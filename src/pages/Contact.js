@@ -17,7 +17,7 @@ export default function Contact() {
                 value={value}
                 onChange={nextValue => setValue(nextValue)}
                 onReset={() => { setValue(initialState) }}
-                style={{ background: "#0a0a0a", padding: 25 }}
+                style={{ background: "#0a0a0a", padding: 25, borderRadius: 10 }}
                 onSubmit={handleSubmit}
             >
                 <FormField name="name" htmlFor="text-input-id" label="Contact Form">
