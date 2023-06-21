@@ -68,6 +68,8 @@ export const teamMembers = new Team()
   .addMember("Cayden Koweck", "Vice President", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
   .addMember("Nini Ola", "Secretary", "mailto:hd9510@wayne.edu", "ppl/Nini_Ola.jpg")
   .addMember("Yasmin Shah", "Event Coordinator", "mailto:hh4891@wayne.edu", "ppl/Yasmin_Shah.jpg")
+  .addMember("Madeline Bartley", "Treasurer", "mailto:he9169@wayne.edu", "ppl/Madeline_Bartley.jpg")
+  .addMember("Omair Hashmi", "Social Media Coordinator", "mailto:hh8497@wayne.edu", "ppl/Omair_Hashmi.png")
   .getMembers()
 
 
