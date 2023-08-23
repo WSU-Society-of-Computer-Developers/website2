@@ -6,7 +6,9 @@ import { Mail, CircleInformation } from "grommet-icons"
 
 export const UtilizationCard = ({ data, url, gridArea, ...rest }) => {
   // IF THE NAME IS TWO WORDS, WE ASSUME ITS A CARD FOR A PERSON AND IF ITS DESCRIPTION IS LESS THAN 4 WORDS, THE SAME APPLIES 
-  const isTeamCard = data.name.split(" ").length === 2 && data.title.split(" ").length < 4
+  const titleWords = data.name.split(" ").length
+  const isTeamCard = titleWords === 2 || titleWords < 5
+  console.log(data.name,isTeamCard)
   return <Box
     direction="column"
     justify="between"
