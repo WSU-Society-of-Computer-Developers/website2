@@ -1,5 +1,5 @@
-import Gallery from "./builders/gallery"
-import Team from "./builders/team"
+import Gallery from "./builders/gallery";
+import Team from "./builders/team";
 
 export const org = {
   fullName: "Society of Computer Developers",
@@ -7,19 +7,19 @@ export const org = {
   // NOTE: preamble supports markdown
   preamble: `Established in Fall 2021 as [Wayne State](https://wayne.edu)'s only Computer Science organization, SCD is focused on creating opportunities for students interested in coding and development. We aim to provide a community of peers that support one another in coding, resume building, networking, and developing new skills. You don't have to be a CS major or know anything about CS to join!`,
   location: "Wayne State University - Detroit, MI",
-  "url": "https://getinvolved.wayne.edu/organization/scd"
-}
+  url: "https://getinvolved.wayne.edu/organization/scd",
+};
 
 export const socials = {
-  "GetInvolved": "https://getinvolved.wayne.edu/organization/scd",
-  "Email": "mailto:waynestatescd@gmail.com",
-  "Instagram": "https://www.instagram.com/scd_wsu/",
-  "Facebook": "https://www.facebook.com/scdwsu",
-  "Twitter": "https://twitter.com/scd_wsu",
-  "GitHub": "https://github.com/WSU-Society-of-Computer-Developers",
-  "LinkedIn": "https://www.linkedin.com/company/society-of-computer-developers/",
-  "YouTube": "https://www.youtube.com/channel/UCAdfexlccMiFANIx6WE4CrQ"
-}
+  GetInvolved: "https://getinvolved.wayne.edu/organization/scd",
+  Email: "mailto:waynestatescd@gmail.com",
+  Instagram: "https://www.instagram.com/scd_wsu/",
+  Facebook: "https://www.facebook.com/scdwsu",
+  Twitter: "https://twitter.com/scd_wsu",
+  GitHub: "https://github.com/WSU-Society-of-Computer-Developers",
+  LinkedIn: "https://www.linkedin.com/company/society-of-computer-developers/",
+  YouTube: "https://www.youtube.com/channel/UCAdfexlccMiFANIx6WE4CrQ",
+};
 
 // SCHEMA:
 //   pages => [page => [label, location]]
@@ -33,47 +33,90 @@ export const pages = [
   ["Hackathon", "#/compete"],
   ["Gallery", "#/gallery"],
   ["Contact", "#/contact"],
-]
+];
 
 /** @type {import("./builders/gallery")} */
 // FYI -> Gallery.addSlide(img: string, caption: string): Gallery
 export const images = new Gallery()
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/f0eaec97-9199-4aff-279a-08dab6692024/1500.jpg",
-    "SCD at Festifall")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/5ec0e5bf-afdc-4a53-dd1d-08dabb5f3f2a/600.jpg",
-    "General Body Meetings (1/3)")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/63def811-6840-4606-2792-08dab6692024/600.jpg",
-    "General Body Meetings (2/3)")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/aee7b032-28ee-4514-dd13-08dabb5f3f2a/600.jpg",
-    "General Body Meetings (3/3)")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/07751377-b95c-4dbd-dd1b-08dabb5f3f2a/600.jpg",
-    "Game Night (1/3)")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/c85641fe-4228-481f-278d-08dab6692024/600.jpg",
-    "Game Night (2/3)")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/bcc1fc69-b8e4-4712-278c-08dab6692024/600.jpg",
-    "Game Night (3/3)")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/6897c3ee-f62b-4279-dd1f-08dabb5f3f2a/600.jpg",
-    "1st place hack at the SCD Winter 2022 Virtual Hackathon")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/c58ef982-d138-427e-dd20-08dabb5f3f2a/600.jpg",
-    "2nd place hack at the SCD Winter 2022 Hackathon ")
-  .addSlide("https://se-images-blob.campuslabs.com/documents/204/07cb1bd5-d002-4da2-dd22-08dabb5f3f2a/600.jpg",
-    "3rd place hack at the SCD Winter 2022 Hackathon")
-  .getSlides()
-
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/f0eaec97-9199-4aff-279a-08dab6692024/1500.jpg",
+    "SCD at Festifall"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/5ec0e5bf-afdc-4a53-dd1d-08dabb5f3f2a/600.jpg",
+    "General Body Meetings (1/3)"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/63def811-6840-4606-2792-08dab6692024/600.jpg",
+    "General Body Meetings (2/3)"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/aee7b032-28ee-4514-dd13-08dabb5f3f2a/600.jpg",
+    "General Body Meetings (3/3)"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/07751377-b95c-4dbd-dd1b-08dabb5f3f2a/600.jpg",
+    "Game Night (1/3)"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/c85641fe-4228-481f-278d-08dab6692024/600.jpg",
+    "Game Night (2/3)"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/bcc1fc69-b8e4-4712-278c-08dab6692024/600.jpg",
+    "Game Night (3/3)"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/6897c3ee-f62b-4279-dd1f-08dabb5f3f2a/600.jpg",
+    "1st place hack at the SCD Winter 2022 Virtual Hackathon"
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/c58ef982-d138-427e-dd20-08dabb5f3f2a/600.jpg",
+    "2nd place hack at the SCD Winter 2022 Hackathon "
+  )
+  .addSlide(
+    "https://se-images-blob.campuslabs.com/documents/204/07cb1bd5-d002-4da2-dd22-08dabb5f3f2a/600.jpg",
+    "3rd place hack at the SCD Winter 2022 Hackathon"
+  )
+  .getSlides();
 
 /** @type {import("./builders/team")} */
 // @type Team.addMember(name: string, title: string, contact: string, img: string | undefined): Team
 export const teamMembers = new Team()
-  .addMember("Zavaar Shah", "President", "mailto:zavaar.shah@wayne.edu", "ppl/Zavaar_Shah.jpg")
-  .addMember("Cayden Koweck", "Vice President", "mailto:hd6247@wayne.edu", "ppl/Cayden_Koweck.jpg")
-  .addMember("Madeline Bartley", "Secretary", "mailto:he9169@wayne.edu", "ppl/Madeline_Bartley.jpg")
-  .addMember("Yasmin Shah", "Event Coordinator", "mailto:hh4891@wayne.edu", "ppl/Yasmin_Shah.jpg")
-  .addMember("Christian S. Rudiger", "Treasurer", "mailto:hg8036@wayne.edu", "ppl/Christian_Rudiger.png")
-  .addMember("Omair Hashmi", "Social Media Coordinator", "mailto:hh8497@wayne.edu", "ppl/Omair_Hashmi.png")
-  .getMembers()
+  .addMember(
+    "Zavaar Shah",
+    "President",
+    "mailto:zavaar.shah@wayne.edu",
+    "ppl/Zavaar_Shah.png"
+  )
+  .addMember(
+    "Madeline Bartley",
+    "Vice President",
+    "mailto:he9169@wayne.edu",
+    "ppl/Madeline_Bartley.jpg"
+  )
+  .addMember("Hayley Spellicy-Ryan", "Secretary", "mailto:hk3086@wayne.edu")
+  .addMember(
+    "Yasmin Shah",
+    "Event Coordinator",
+    "mailto:hh4891@wayne.edu",
+    "ppl/Yasmin_Shah.jpg"
+  )
+  .addMember(
+    "Christian S. Rudiger",
+    "Treasurer",
+    "mailto:hg8036@wayne.edu",
+    "ppl/Christian_Rudiger.png"
+  )
+  .addMember(
+    "Omair Hashmi",
+    "Social Media Coordinator",
+    "mailto:hh8497@wayne.edu",
+    "ppl/Omair_Hashmi.png"
+  )
+  .getMembers();
 
-
-// its in here bc spell check is here 
+// its in here bc spell check is here
 export const projectSummary = `
 # What is it?
 
@@ -159,4 +202,4 @@ The learning sessions will provide team members the tools/ideas needed to accomp
 
 Join our [Discord](https://discord.gg/ZgdN2JUJ6k) and join a team!
 
-`
+`;
