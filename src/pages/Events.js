@@ -3,11 +3,11 @@ import { Box, Spinner, Heading, Paragraph, Button } from "grommet";
 import Parser from "rss-parser/dist/rss-parser.min.js"; // es5 workaround https://github.com/rbren/rss-parser/issues/53#issuecomment-361978210
 import { UtilizationCard } from "../components";
 // import { socials, images } from "../data";
-import Markdown from "markdown-to-jsx/dist/index.js";
+import Markdown from "../components/Markdown";
 export default function Events() {
-  const url = "https://getinvolved.wayne.edu/organization/scd/events.rss";
+  // const url = "https://getinvolved.wayne.edu/organization/scd/events.rss";
   // const url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
-  //   const url = "https://getinvolved.wayne.edu/organization/pmhsc/events.rss";
+  const url = "https://getinvolved.wayne.edu/organization/pmhsc/events.rss";
   const defaultMsg = "No events.";
   const [events, setEvents] = React.useState([]);
   const [isLoading, setLoading] = React.useState(false);

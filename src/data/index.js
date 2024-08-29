@@ -74,10 +74,6 @@ export const images = new Gallery()
     "https://se-images-blob.campuslabs.com/documents/204/c58ef982-d138-427e-dd20-08dabb5f3f2a/600.jpg",
     "2nd place hack at the SCD Winter 2022 Hackathon "
   )
-  .addSlide(
-    "https://se-images-blob.campuslabs.com/documents/204/07cb1bd5-d002-4da2-dd22-08dabb5f3f2a/600.jpg",
-    "3rd place hack at the SCD Winter 2022 Hackathon"
-  )
   .getSlides();
 
 /** @type {import("./builders/team")} */
@@ -108,7 +104,7 @@ export const teamMembers = new Team()
     "ppl/Yasmin_Shah.jpg"
   )
   .addMember(
-    "Christian S. Rudiger",
+    "Christian S-Rudiger",
     "Treasurer",
     "mailto:hg8036@wayne.edu",
     "ppl/Christian_Rudiger.png"
