@@ -1,3 +1,4 @@
+// @deprecated
 import React from "react";
 import { Box, Heading } from "grommet";
 import Markdown from "../components/Markdown";

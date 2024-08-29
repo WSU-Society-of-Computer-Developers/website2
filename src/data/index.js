@@ -26,7 +26,6 @@ export const socials = {
 export const pages = [
   ["Home", "#/"],
   ["Team", "#/team"],
-  ["Project", "#/project"],
   ["Donate", "#/donate"],
   ["Events", "#/events"],
   ["Recordings", "#/recordings"],
