@@ -95,7 +95,12 @@ export const teamMembers = new Team()
     "mailto:he9169@wayne.edu",
     "ppl/Madeline_Bartley.jpg"
   )
-  .addMember("Hayley Spellicy-Ryan", "Secretary", "mailto:hk3086@wayne.edu")
+  .addMember(
+    "Hayley Spellicy-Ryan",
+    "Secretary",
+    "mailto:hk3086@wayne.edu",
+    "ppl/Hayley_S.jpg"
+  )
   .addMember(
     "Yasmin Shah",
     "Event Coordinator",
