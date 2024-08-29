@@ -5,9 +5,9 @@ import { UtilizationCard } from "../components";
 // import { socials, images } from "../data";
 import Markdown from "../components/Markdown";
 export default function Events() {
-  // const url = "https://getinvolved.wayne.edu/organization/scd/events.rss";
+  const url = "https://getinvolved.wayne.edu/organization/scd/events.rss";
   // const url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
-  const url = "https://getinvolved.wayne.edu/organization/pmhsc/events.rss";
+  // const url = "https://getinvolved.wayne.edu/organization/pmhsc/events.rss";
   const defaultMsg = "No events.";
   const [events, setEvents] = React.useState([]);
   const [isLoading, setLoading] = React.useState(false);
