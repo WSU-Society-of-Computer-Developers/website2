@@ -45,14 +45,17 @@ export default function md({ children }) {
             component: Div,
             props: { className: "text-base bg-gray-800 text-white p-1" },
           },
-          img: { component: Div, props: { className: "w-full" } },
+          img: { component: "img", props: { className: "lg:w-3/4 w-full" } },
           hr: {
             component: Div,
             props: { className: "border-gray-700 border-1 my-3" },
           },
           a: {
             component: "a",
-            props: { className: "text-teal-400 hover:underline" },
+            props: {
+              className: "text-teal-400 hover:underline",
+              target: "_blank",
+            },
           },
           ul: {
             component: "ul",
