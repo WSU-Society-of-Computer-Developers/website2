@@ -8,6 +8,7 @@ import { AppHeader } from "./components";
 
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Join from "./pages/Join";
 import Team from "./pages/Team";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
@@ -22,6 +23,7 @@ import Workshops from "./pages/Workshops";
 // NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data'
 const pageComps = [
   <Home />,
+  <Join />,
   <Team />,
   <Donate />,
   <Events />,

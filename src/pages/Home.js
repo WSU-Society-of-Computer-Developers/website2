@@ -1,4 +1,4 @@
-import { org, socials } from "../data";
+import { org, pages, socials } from "../data";
 import {
   Box,
   Button,
@@ -46,6 +46,7 @@ export default function Home() {
                 level={1}
                 style={{
                   marginTop: 25,
+                  marginBottom: 10,
                   maxWidth: "300",
                   fontSize: "clamp(30px, 5.5vw, 120px)",
                   whiteSpace: "pre",
@@ -68,8 +69,8 @@ export default function Home() {
                   style={{ width: "100%" }}
                   primary
                   label="Join Today"
-                  href={org.url}
-                  target="_blank"
+                  className="mt-4"
+                  href={pages.find((page) => page[0] === "Join")[1]}
                 />
               </Box>
               <Nav
