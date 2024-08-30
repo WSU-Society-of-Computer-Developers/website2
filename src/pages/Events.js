@@ -8,15 +8,22 @@ export default function Events() {
   const url = "https://getinvolved.wayne.edu/organization/scd/events.rss";
   // const url = "https://getinvolved.wayne.edu/organization/student-senate/events.rss"
   // const url = "https://getinvolved.wayne.edu/organization/pmhsc/events.rss";
-  const defaultMsg = "No events.";
+  const [msg, setMsg] = React.useState("No events.");
   const [events, setEvents] = React.useState([]);
   const [isLoading, setLoading] = React.useState(false);
   React.useEffect(() => {
     async function runFetch() {
       setLoading(true);
-      const feed = await new Parser().parseURL(url);
-      setLoading(false);
-      setEvents(feed.items);
+      try {
+        const feed = await new Parser().parseURL(url);
+        setEvents(feed.items);
+      } catch (e) {
+        // cors errors come up frequently on firefox and safari
+        console.error(e);
+        setMsg("Failed to get events. *Please click the button above.*");
+      } finally {
+        setLoading(false);
+      }
     }
     runFetch();
   }, []);
@@ -68,7 +75,7 @@ export default function Events() {
             )
           ) : (
             <Paragraph textAlign="center">
-              <Markdown>{defaultMsg}</Markdown>
+              <Markdown>{msg}</Markdown>
             </Paragraph>
           )}
         </div>
