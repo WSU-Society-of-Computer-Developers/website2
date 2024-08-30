@@ -1,23 +1,14 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import {
-  Box,
-  Grommet,
-  ResponsiveContext
-} from "grommet";
+import { Box, Grommet, ResponsiveContext } from "grommet";
 import { Menu } from "grommet-icons";
 import { theme } from "./theme";
-import "./index.css"
-import {
-  AppHeader,
-} from "./components";
+import "./index.css";
+import { AppHeader } from "./components";
 
-import {
-  HashRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Join from "./pages/Join";
 import Team from "./pages/Team";
 import Donate from "./pages/Donate";
 import Contact from "./pages/Contact";
@@ -28,21 +19,19 @@ import { pages } from "./data";
 import { Footer } from "./components/Footer";
 import Hackathon from "./pages/Hackathon";
 import Workshops from "./pages/Workshops";
-import Project from "./pages/Project";
 
-
-// NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data' 
+// NOTE: **PAGE COMPONENTS MUST MATCH ORDER OF 'pages' VARIABLE IN './data'
 const pageComps = [
   <Home />,
+  <Join />,
   <Team />,
-  <Project/>,
   <Donate />,
   <Events />,
   <Workshops />,
   <Hackathon />,
   <Gallery />,
-  <Contact />
-]
+  <Contact />,
+];
 
 class AppBody extends Component {
   static contextType = ResponsiveContext;
@@ -53,19 +42,15 @@ class AppBody extends Component {
           <div className="bg">
             <React.StrictMode>
               <Box fill>
-                <AppHeader
-                  appName={""}
-                  appIcon={<Menu />}
-                />
+                <AppHeader appName={""} appIcon={<Menu />} />
                 {/*  MAIN CONTENT  */}
                 <div style={{ overflowY: "scroll", marginBottom: "10vh" }}>
                   <Switch>
-                    {pages.map(
-                      ([label, location], index) =>
-                        <Router exact path={'/' + location.split('/').pop()}>
-                          {pageComps[index]}
-                        </Router>
-                    )}
+                    {pages.map(([label, location], index) => (
+                      <Router exact path={"/" + location.split("/").pop()}>
+                        {pageComps[index]}
+                      </Router>
+                    ))}
                     <Route path="*">
                       <NotFound />
                     </Route>
@@ -81,8 +66,10 @@ class AppBody extends Component {
   }
 }
 const App = () => {
-  return (<Grommet theme={theme} full>
-    <AppBody />
-  </Grommet>)
+  return (
+    <Grommet theme={theme} full>
+      <AppBody />
+    </Grommet>
+  );
 };
 render(<App />, document.getElementById("root"));
