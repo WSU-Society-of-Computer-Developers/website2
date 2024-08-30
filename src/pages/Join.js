@@ -8,7 +8,7 @@ const info = `
 
 Joining SCD is easy!
 
-1. **Go to our [Get Involved](${socials.GetInvolved}) page.**
+1. **Go to our [Get Involved](${socials.GetInvolved}) page and sign in.**
 
 ![step1](join/1.png)
 
