@@ -85,36 +85,6 @@ export const teamMembers = new Team()
     "mailto:zavaar.shah@wayne.edu",
     "ppl/Zavaar_Shah.png"
   )
-  .addMember(
-    "Madeline Bartley",
-    "Vice President",
-    "mailto:he9169@wayne.edu",
-    "ppl/Madeline_Bartley.jpg"
-  )
-  .addMember(
-    "Hayley Spellicy-Ryan",
-    "Secretary",
-    "mailto:hk3086@wayne.edu",
-    "ppl/Hayley_S.jpg"
-  )
-  .addMember(
-    "Yasmin Shah",
-    "Event Coordinator",
-    "mailto:hh4891@wayne.edu",
-    "ppl/Yasmin_Shah.jpg"
-  )
-  .addMember(
-    "Christian S-Rudiger",
-    "Treasurer",
-    "mailto:hg8036@wayne.edu",
-    "ppl/Christian_Rudiger.png"
-  )
-  .addMember(
-    "Omair Hashmi",
-    "Social Media Coordinator",
-    "mailto:hh8497@wayne.edu",
-    "ppl/Omair_Hashmi.png"
-  )
   .getMembers();
 
 // its in here bc spell check is here
