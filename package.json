@@ -9,7 +9,8 @@
     "cspell": "^6.31.1",
     "grommet": "^2.25.3",
     "grommet-icons": "4.4.0",
-    "markdown-to-jsx": "^7.1.7",
+    "lucide-react": "^0.563.0",
+    "markdown-to-jsx": "^9.6.1",
     "react": "^16.6.1",
     "react-animations": "^1.0.0",
     "react-dom": "^16.6.1",
@@ -20,7 +21,7 @@
   "devDependencies": {
     "babel-preset-minify": "^0.5.2",
     "gh-pages": "^4.0.0",
-    "react-scripts": "1.0.0"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +31,17 @@
     "spellCheck": "cspell ./src/data/index.js",
     "predeploy": "npm run spellCheck && npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

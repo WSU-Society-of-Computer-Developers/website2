@@ -1,5 +1,5 @@
 import React from "react";
-import Markdown from "markdown-to-jsx/dist/index.js";
+import Markdown from "markdown-to-jsx";
 
 const Div = ({ children, ...props }) => <div {...props}>{children}</div>;
 
