@@ -7,7 +7,7 @@ Written in [react.js](https://reactjs.org/) and styled with [grommet](https://gr
 ## Development
 
 > [!NOTE]
-> You must install >= [Node v18](https://nodejs.org/en) to develop.
+> You must install >= [Node v22](https://nodejs.org/en) to develop.
 
 1. Clone the repo
 
